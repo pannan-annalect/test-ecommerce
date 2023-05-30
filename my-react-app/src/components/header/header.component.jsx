@@ -3,7 +3,7 @@ import { AccountCircle } from '@mui/icons-material';
 import { Grid, IconButton, InputAdornment, TextField, Typography } from '@mui/material'
 
 
-const headerComponent = () => {
+const HomeComponent = () => {
     return(
         <>
         test
@@ -11,4 +11,4 @@ const headerComponent = () => {
     )
 }
 
-export default headerComponent
+export default HomeComponent
