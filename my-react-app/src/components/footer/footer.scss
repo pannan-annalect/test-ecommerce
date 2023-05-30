@@ -1,0 +1,27 @@
+@import '../../common.scss';
+.footer{
+    padding: 80px 0;
+    border-top: 1px solid #c3c3c3;
+    h6{
+        text-transform: uppercase;
+        font-size:19px;
+        font-weight: 500;
+        color: $textcolor;
+        letter-spacing: 2px;
+    }
+    ul.footer-links{
+        list-style: none;
+        padding: 0;
+        li{
+            padding: 5px 0;
+            a{
+                color: $textcolor;
+                font-size: 17px;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                line-height: 32px;
+            }
+        }
+    }
+}
