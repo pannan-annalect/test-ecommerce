@@ -1,0 +1,48 @@
+@import '../../common.scss';
+h3.subtitle{
+    font-weight: 300;
+    font-size: 26px;
+    text-transform: capitalize;
+    padding: 0 0 12px;
+    margin:0;
+}
+h2.hometitle{
+    font-weight: 500;
+    font-size: 37px;
+    text-transform: capitalize;
+    padding: 0;
+    margin:0;
+}
+.product-listing{
+    text-align: center;
+    .product-title{
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .product-rating{
+        font-size: 13px;
+        .rating{
+            padding: 0 5px;
+        }
+        .count{
+            color:$blue;
+        }
+    }
+    .product-desc{
+
+    }
+    .prod-amount{
+        color:$red;
+    }
+}
+.best-sellers{
+    .sellers-category{
+        list-style: none;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        li{
+            padding: 2px 8px;
+        }
+    }
+}

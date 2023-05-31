@@ -21,7 +21,6 @@ function ImageCarousel({ images }) {
 
   return (
     <div>
-      <h2>Image Carousel</h2>
       <div className="slider">
         <div className="left-arrow" onClick={prevSlide}>
           ⬅
