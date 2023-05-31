@@ -1,4 +1,7 @@
 @import '../../common.scss';
+img{
+    max-width: 100%;
+}
 h3.subtitle{
     font-weight: 300;
     font-size: 26px;
@@ -39,7 +42,9 @@ h2.hometitle{
     .sellers-category{
         list-style: none;
         margin: 0;
+        padding: 0;
         display: flex;
+        justify-content: center;
         align-items: center;
         li{
             padding: 2px 8px;

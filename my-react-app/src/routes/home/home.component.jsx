@@ -74,29 +74,44 @@ const HomeComponent = () => {
    </div>
   </div>
 </CardCarousel>
-<section className="best-sellers">
-  <Grid container>
-    <Grid item xs={12}>
-  <Typography variant="h3" className="subtitle" textAlign={"center"}>Our</Typography>
-      <Typography variant="h2" className="hometitle" textAlign={"center"}>Bestsellers</Typography>
-      <ul className="sellers-category">
-        <li>
-          <Link>Face Creams</Link>
-        </li>
-        <li>
-          <Link>Face Creams</Link>
-        </li>
-        <li>
-          <Link>Face Creams</Link>
-        </li>
-        <li>
-          <Link>Face Creams</Link>
-        </li>
-      </ul>
-  </Grid>
-  </Grid>
-</section>
-        </>
+        <section className="best-sellers">
+          <Grid container>
+            <Grid item xs={12}>
+          <Typography variant="h3" className="subtitle" textAlign={"center"}>Our</Typography>
+              <Typography variant="h2" className="hometitle" textAlign={"center"}>Bestsellers</Typography>
+              <ul className="sellers-category">
+                <li>
+                  <Link>Face Creams</Link>
+                </li>
+                <li>
+                  <Link>Face Creams</Link>
+                </li>
+                <li>
+                  <Link>Face Creams</Link>
+                </li>
+                <li>
+                  <Link>Face Creams</Link>
+                </li>
+              </ul>
+          </Grid>
+          </Grid>
+        </section>
+        <section className="spotlight">
+          <Typography variant="h3" className="subtitle" textAlign={"center"}>In the</Typography>
+          <Typography variant="h2" className="hometitle" textAlign={"center"}>Spotlight</Typography>
+          <Grid container>
+            <Grid item xs={12} md={6}>
+              <img src="//www.dotandkey.com/cdn/shop/files/desk-45_ccef1097-f1b8-4f09-8ed3-7d0837ea216a.webp" />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <img src="//www.dotandkey.com/cdn/shop/files/desk_resize.jpg" />
+            </Grid>
+            <Grid item xs={12}>
+            <img src="//www.dotandkey.com/cdn/shop/files/desk-47.webp" />
+            </Grid>
+          </Grid>
+        </section>
+      </>
     )
 }
 
