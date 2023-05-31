@@ -1,0 +1,40 @@
+h1{
+  text-align: center;
+}
+
+.slick-slider{
+  width: 800px;
+  margin: 0 auto;
+
+  .slick-prev:before, .slick-next:before {
+    color: black !important;
+   }
+
+   .card-container{
+    width: 218px;
+    background: #FFFFFF;
+    border: 1px solid #C7C7C7;
+    .content{
+     .product-rating{
+      .star{
+        padding-right: 1px !important;
+        font-weight: 100 !important;
+        color: #FFCE51;
+      }
+      .star:before {
+        content: "\e000";
+      }
+      .rating{}
+      .count{}
+
+     } 
+     .product-name{
+
+     }
+     .price-product{
+
+     }
+    }
+   }
+}
+
