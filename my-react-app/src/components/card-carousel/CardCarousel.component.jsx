@@ -1,4 +1,5 @@
 import React from "react";
+import { Grid, Box, Container,Link,IconButton, InputAdornment, TextField, Typography } from '@mui/material'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -15,8 +16,8 @@ function CardCarousel ({ slidesToShow, slidesToScroll, children }) {
     };
     return (
       <div>
-        <h2>SHOP OUR</h2>
-        <h1>NEW ARRIVALS</h1>
+        <Typography variant="h3" className="subtitle" textAlign={"center"}>Shop our</Typography>
+        <Typography variant="h2" className="hometitle" textAlign={"center"} sx={{mb:3}}>New Arrivals</Typography>
         <Slider {...settings}>
           {children}
         </Slider>
