@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Grid, TextField, Typography, Button } from '@mui/material';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -42,48 +43,44 @@ const ContactForm = () => {
   };
 
   return (
-    <div className='form-container'>
-        <form onSubmit={handleSubmit}>
-     <div className='row'>
-        <div className='column'>
-            <div className='label'> 
-                <label htmlFor="name">Name</label>
-            </div>
-            <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            />
-            {errors.name && <div className="error">{errors.name}</div>}
-        </div>
-        <div className='column'>
-            <div className='label'> 
-                <label htmlFor="email">Email</label>
-            </div>
-            <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            />
-            {errors.email && <div className="error">{errors.email}</div>}
-        </div>
-     </div>
-      <div className='message'>
-        <div className='label'> 
-            <label htmlFor="message">Message</label>
-        </div>
-        <textarea
-          id="message"
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={6}>
+        <TextField
+          fullWidth
+          label="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          error={Boolean(errors.name)}
+          helperText={errors.name}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TextField
+          fullWidth
+          label="Email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          error={Boolean(errors.email)}
+          helperText={errors.email}
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <TextField
+          fullWidth
+          label="Message"
+          multiline
+          rows={4}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-        ></textarea>
-        {errors.message && <div className="error">{errors.message}</div>}
-      </div>
-      <div className='submit-button'><button type="submit">Submit</button></div>
-    </form>
-    </div>
+          error={Boolean(errors.message)}
+          helperText={errors.message}
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <Button variant="contained" color="primary" onClick={handleSubmit}>Submit</Button>
+      </Grid>
+    </Grid>
   );
 };
 

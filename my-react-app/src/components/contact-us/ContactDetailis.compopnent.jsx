@@ -1,53 +1,73 @@
+import React from 'react';
+import { Typography, Grid, Link, makeStyles } from '@mui/material';
+import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import MailIcon from '@mui/icons-material/Mail';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    padding: theme.spacing(2),
+  },
+  header: {
+    marginBottom: theme.spacing(2),
+  },
+  contactDetails: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  textTiming: {
+    marginRight: theme.spacing(4),
+  },
+  contactMethods: {
+    display: 'flex',
+  },
+  contactMethod: {
+    display: 'flex',
+    alignItems: 'center',
+    marginRight: theme.spacing(2),
+  },
+  icon: {
+    marginRight: theme.spacing(1),
+  },
+}));
 
-const ContactDetails = () =>{
+const ContactDetails = () => {
+  const classes = useStyles();
 
-    return(
-
-        <div>
-            <header>
-                <h1>Contact Us</h1>
-            </header>
-            <div className="contact-details">
-                <div className="text-timimg">Message us on WhatsApp<br/><br/>Business Hours: 10 am to 6:30 pm<br/>(Monday to Saturday)</div>
-                
-                <div className="how-to-contact">
-                    <div className="call-mail">
-                        <div className="call">
-                            <div className="call-img">
-                                <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/istockphoto-1280270505-170667a.png?v=1633437242" alt="call" />
-                            </div>
-                            <div className="text">
-                                <a href="tel:8447704734">8447704734</a>
-                            </div>
-                        </div>
-
-                        <div className="call">
-                            <a href="https://api.whatsapp.com/send?phone=8447704734">
-                                <div className="call-img">
-                                    <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Whatsapp-Black-Icon-PNG-Image_480x480.png?v=1591938885" alt="call" />
-                                </div>
-                                <div className="number">
-                                    8447704734
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="call">
-                            <a href="mailto:care@dotandkey.com">
-                                <div className="call-img">
-                                    <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/email_PNG55_480x480.png?v=1591870855" alt="call" />
-                                </div>
-                                <div className="text">
-                                    <a href="mailto:care@dotandkey.com">care@dotandkey.com</a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className={classes.root}>
+      <Typography variant="h5" component="header" className={classes.header}>
+        Contact Us
+      </Typography>
+      <div className={classes.contactDetails}>
+        <div className={classes.textTiming}>
+          <Typography variant="body1" component="div">
+            Message us on WhatsApp
+          </Typography>
+          <Typography variant="body1" component="div">
+            Business Hours: 10 am to 6:30 pm
+            <br />
+            (Monday to Saturday)
+          </Typography>
         </div>
-    )
-}
+        <div className={classes.contactMethods}>
+          <div className={classes.contactMethod}>
+            <PhoneInTalkIcon className={classes.icon} />
+            <Link href="tel:8447704734">8447704734</Link>
+          </div>
+          <div className={classes.contactMethod}>
+            <WhatsAppIcon className={classes.icon} />
+            <Link href="https://api.whatsapp.com/send?phone=8447704734">8447704734</Link>
+          </div>
+          <div className={classes.contactMethod}>
+            <MailIcon className={classes.icon} />
+            <Link href="mailto:care@dotandkey.com">care@dotandkey.com</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default ContactDetails;
