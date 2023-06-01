@@ -1,0 +1,113 @@
+.contactus-container{
+    width: 100%;
+    max-width: 75%;
+    margin: auto;
+    padding: 60px 40px 20px 40px;  
+    header{
+        h1{
+            font-weight: 700;   
+        }
+    }
+
+    .contact-details{        
+        .text-timimg{
+            line-height: 28px;
+            text-align: center;
+        }
+        .how-to-contact{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 40px 20px 20px 20px;
+            .call-mail{
+                width: 50%;
+                display: flex;
+                justify-content: space-around;
+                .call{
+                    .call-img{
+                        text-align: center;
+                        img{
+                            width: 80px;
+                            height: 80px;
+                        }                        
+                    }
+                    .text{                        
+                            a{
+                                text-decoration: none;
+                                border-bottom: 2px solid rgba(60,60,60,.1);
+                                color: #3c3c3c;
+                                font-weight: 700;
+                                position: relative;
+
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom: -2px;
+                                    left: 0;
+                                    width: 0%;
+                                    border-bottom: 2px solid currentColor;
+                                    transition: width .5s ease;
+                                }
+                                &:hover:after{                                   
+                                    width: 100%;
+                                }
+                            }
+                    }
+
+                    .number{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }        
+    }
+
+    .form-container{
+        width: 100%;
+        max-width: 75%;
+        margin: 0 auto;
+        padding-top: 40px;
+        .row{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            .column{
+                width: 50%;
+
+                input{
+                    width: 80%;
+                    height: 50px;
+                }
+                .error{
+                    color: red;
+                }
+            }
+        }
+        .message{
+            textarea{
+                width: 100%;
+                height: 80px;
+            }
+            .error{
+                color: red;
+            }
+        }
+        .submit-button{
+            width: 100%;
+            margin: 10px auto;
+            max-width: 200px;
+            text-align: center;
+
+            button{
+                width: 150px;
+                height: 50px;
+                background-color: #000;
+                color: #fff;
+                border-radius: 4px;
+                font-size: 18px;
+            }
+        }
+    }
+      
+}
