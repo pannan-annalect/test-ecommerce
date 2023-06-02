@@ -1,7 +1,7 @@
 import React from "react";
-import logo from '../../assets/images/logo.jpg';
-import PersonIcon from '@mui/icons-material/Person';
-import { ShoppingBagOutlinedIcon,PersonOutlineIcon } from '@mui/icons-material';
+import logo from '../../assets/images/logo.png';
+import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import { Grid, Box, Container,IconButton, InputAdornment, TextField, Typography } from '@mui/material'
 import { Link } from 'react-router-dom';
 import './header.scss';
@@ -22,9 +22,8 @@ const HeaderComponent = () => {
                                 </nav>
                             </div>
                             <div className="myaccount">
-                                <Link sx={{mx:1}} href="#">Account</Link>
-                                <Link sx={{mx:1}} href="#">Cart</Link>
-                                <Link sx={{mx:1}} to="/auth"><PersonIcon/></Link>
+                                <Link sx={{mx:1}} href="#"><ShoppingBagOutlinedIcon sx={{ color: '#3c3c3c',fontSize:32 }} /></Link>
+                                <Link sx={{mx:1}} to="/auth"><PersonOutlinedIcon sx={{ color: '#3c3c3c',fontSize:32 }} /> </Link>
                             </div>
                         </Grid>
                     </Grid>

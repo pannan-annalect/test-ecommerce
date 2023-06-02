@@ -3,33 +3,30 @@ import { Typography,Card,CardActions,CardContent,CardMedia,Button, Grid, Box } f
 import ImageCarousel from "../../components/image-carousel/ImageCarousel.component";
 import CustomerSection from "../../components/customer-section/CustomerSection.component";
 import CardCarousel from "../../components/card-carousel/CardCarousel.component";
+import CustomerCollections from "../../components/customer-collections/CustomerCollections.component";
 import './home.scss';
 import {Star,Verified} from '@mui/icons-material';
 import { Link } from "react-router-dom";
+import productimage from '../../assets/images/best-seller.jpg';
+import bestsellerimage from '../../assets/images/banner-1.jpg';
+import sliderimage from '../../assets/images/top-slider-image.jpg';
+import featureimage from '../../assets/images/feature-image.png';
+import appimage from '../../assets/images/app-image.png';
+import userimage from '../../assets/images/user-image.png';
+
 
 
 const HomeComponent = () => {
     return(
         <>
-        <ImageCarousel images={[
-    "//www.dotandkey.com/cdn/shop/files/vit_c_range_8fe898e8-20cf-48b8-b793-7636da885b89.jpg",
-    "//www.dotandkey.com/cdn/shop/files/pro_desk_552a0e39-53bd-4a71-98da-ceb1a8d819b7.jpg",
-    "//www.dotandkey.com/cdn/shop/files/CATE_DESK_70f0f8fb-6857-4d23-bb4f-86449f2dcbd1.jpg",
-  // "https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  // "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-]} />
-<CustomerSection  images={[
-  // "https://images.pexels.com/photos/3836292/pexels-photo-3836292.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  // "https://images.pexels.com/photos/2792157/pexels-photo-2792157.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  // "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  // "https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  // "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-]}/>
+        <ImageCarousel />
+        <CustomerCollections/>
+<CustomerSection  />
 <Grid container>
 <Card className="product-listing" sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 250 }}
-        image="//www.dotandkey.com/cdn/shop/files/vitcsunscreen_large.jpg"
+        image={productimage}
         title="green iguana"
       />
       <CardContent sx={{pt:1}}>
@@ -56,7 +53,7 @@ const HomeComponent = () => {
   <div>
    <div className="card-container">
     <div className="img">
-      <img width="217" src="https://www.dotandkey.com/cdn/shop/files/vitcsunscreen_1747d970-e108-40f7-93dd-d5818262c85d_large.jpg?v=1684820542"/>
+      <img width="217" src=""/>
     </div>
     <div className="content">
       <div className="product-rating">
@@ -101,13 +98,13 @@ const HomeComponent = () => {
           <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Spotlight</Typography>
           <Grid container>
             <Grid item xs={12} md={6} className="sl-left">
-              <img src="//www.dotandkey.com/cdn/shop/files/desk-45_ccef1097-f1b8-4f09-8ed3-7d0837ea216a.webp" />
+              <img src={bestsellerimage} />
             </Grid>
             <Grid item xs={12} md={6} className="sl-right">
-              <img src="//www.dotandkey.com/cdn/shop/files/desk_resize.jpg" />
+              <img src={bestsellerimage} />
             </Grid>
             <Grid item xs={12} className="sl-bottom">
-            <img src="//www.dotandkey.com/cdn/shop/files/desk-47.webp" />
+            <img src={sliderimage} />
             </Grid>
           </Grid>
         </section>
@@ -146,7 +143,7 @@ const HomeComponent = () => {
 
         <section className="app-banner">
           <Link>
-            <img src="//www.dotandkey.com/cdn/shop/files/0_new_appArtboard_1_1_1.png"/>
+            <img src={appimage} />
           </Link>
         </section>
 
@@ -165,7 +162,7 @@ const HomeComponent = () => {
               <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>When shared</Typography>
               <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Love is greater</Typography>
               <div>
-                <img className="" src="https://www.dotandkey.com/cdn/shop/files/Untitled-2_6_1.png" />
+              <img src={sliderimage} />
               </div>
               
             </Grid>
@@ -189,16 +186,16 @@ const HomeComponent = () => {
 
         <section className="featured-image">
                 <Box className="image-details">
-                  <img src="//www.dotandkey.com/cdn/shop/files/3-ICONS.png" />
+                  <img src={featureimage} />
                 </Box>
                 <Box className="image-details">
-                  <img src="//www.dotandkey.com/cdn/shop/files/1-ICONS_b6233563-9f3e-43f6-b158-5205886e2120.png" />
+                <img src={featureimage} />
                 </Box>
                 <Box className="image-details">
-                  <img src="//www.dotandkey.com/cdn/shop/files/4-ICONS.png" />
+                <img src={featureimage} />
                 </Box>
                 <Box className="image-details">
-                  <img src="//www.dotandkey.com/cdn/shop/files/2-ICONS.png" />
+                <img src={featureimage} />
                 </Box>
         </section>
 
@@ -215,7 +212,7 @@ const HomeComponent = () => {
             <Grid item xs={12}>
             <Card className="" sx={{maxWidth:360,margin:'0 auto',boxShadow:'none',overflow:'visible',position:'relative'}}>
               <div className="testimonial-image">
-                <img src="//www.dotandkey.com/cdn/shop/files/Venkatesh_S_compact.png" />
+                <img src={userimage} />
               </div>
               <CardContent sx={{paddingTop:'50px',boxShadow:'0 0 5px rgba(0,0,0,.1)',borderRadius:'10px'}}>
                 <Typography className="testimonial-rating" sx={{display: "flex"}}>

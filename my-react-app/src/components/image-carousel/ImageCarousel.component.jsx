@@ -1,43 +1,41 @@
 import { useState, useEffect } from "react";
 import "./ImageCarousel.style.scss";
+import Slider from "react-slick";
+import sliderimage from '../../assets/images/top-slider-image.jpg';
 
-function ImageCarousel({ images }) {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [current]);
-
-  function nextSlide() {
-    setCurrent(current === images.length - 1 ? 0 : current + 1);
-  }
-
-  function prevSlide() {
-    setCurrent(current === 0 ? images.length - 1 : current - 1);
-  }
+function ImageCarousel() {
+  const settings = {
+    className: "slider",
+    //innerWidth:"100%",
+    arrows:true,
+    swipeToSlide: true,
+    dots: true,
+    infinite: true,
+    draggable: true,
+    accessibility: false,
+    //centerMode: true,
+    //variableWidth:true,
+    autoplay:true,
+    speed: 500,
+    autoplaySpeed:4000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   return (
-    <div>
-      <div className="slider">
-        <div className="left-arrow" onClick={prevSlide}>
-          ⬅
-        </div>
-        <div className="right-arrow" onClick={nextSlide}>
-          ⮕
-        </div>
-        {images.map(
-          (image, index) =>
-            current === index && (
-              <div key={image} className="slide">
-                <img src={image} alt="images" />
-              </div>
-            )
-        )}
+    <div className="home-top-slider">
+        <Slider {...settings}>
+          <div>
+            <img src={sliderimage} />
+          </div>
+          <div>
+          <img src={sliderimage} />
+          </div>
+          <div>
+          <img src={sliderimage} />
+          </div>
+        </Slider>
       </div>
-    </div>
   );
 }
 

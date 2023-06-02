@@ -1,15 +1,11 @@
-.slider {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-
-  .left-arrow,
-  .right-arrow {
+.home-top-slider{
+  .slider {
+    &.slick-initialized{
+      width: 100% !important;
+    }
+    
+    .left-arrow,
+    .right-arrow {
     position: absolute;
     z-index: 1;
     font-size: 20px;
@@ -20,25 +16,25 @@
     padding: 4px 8px;
     cursor: pointer;
     user-select: none;
-  }
-  
-  .left-arrow {
+    }
+
+    .left-arrow {
     left: 5%;
-  }
-  
-  .right-arrow {
+    }
+
+    .right-arrow {
     right: 5%;
+    }
+    .slide {
+    min-width: 50%;
+    //height: 60vh;
+    font-size: 50px;
+    }
+
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
   }
-.slide {
-  min-width: 50%;
-  //height: 60vh;
-  font-size: 50px;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 }
