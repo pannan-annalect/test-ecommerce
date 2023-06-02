@@ -15,9 +15,9 @@ const HeaderComponent = () => {
                             <div className="logo-nav">
                                 <Box className="logo" component="img" src={logo} alt="logo" height={83}/>
                                 <nav>
-                                <ul sx={{mx:2}} className="header-nav">
-                                    <li><Link href="#">Best Sellers</Link></li>
-                                    <li><Link href="#">Shop all Products</Link></li>
+                                    <ul sx={{mx:2}} className="header-nav">
+                                        <li><Link href="#">Best Sellers</Link></li>
+                                        <li><Link href="#">Shop all Products</Link></li>
                                     </ul>
                                 </nav>
                             </div>
