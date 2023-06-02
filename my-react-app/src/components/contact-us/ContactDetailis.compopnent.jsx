@@ -1,10 +1,10 @@
 import React from 'react';
-import { Typography, Grid, Link, makeStyles } from '@mui/material';
+import { Typography, Link, createTheme } from '@mui/material';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import MailIcon from '@mui/icons-material/Mail';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = createTheme((theme) => ({
   root: {
     padding: theme.spacing(2),
   },
@@ -33,15 +33,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ContactDetails = () => {
-  const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Typography variant="h5" component="header" className={classes.header}>
+    <div className={useStyles.root}>
+      <Typography variant="h5" component="header" className={useStyles.header}>
         Contact Us
       </Typography>
-      <div className={classes.contactDetails}>
-        <div className={classes.textTiming}>
+      <div className={useStyles.contactDetails}>
+        <div className={useStyles.textTiming}>
           <Typography variant="body1" component="div">
             Message us on WhatsApp
           </Typography>
@@ -51,17 +50,17 @@ const ContactDetails = () => {
             (Monday to Saturday)
           </Typography>
         </div>
-        <div className={classes.contactMethods}>
-          <div className={classes.contactMethod}>
-            <PhoneInTalkIcon className={classes.icon} />
+        <div className={useStyles.contactMethods}>
+          <div className={useStyles.contactMethod}>
+            <PhoneInTalkIcon className={useStyles.icon} />
             <Link href="tel:8447704734">8447704734</Link>
           </div>
-          <div className={classes.contactMethod}>
-            <WhatsAppIcon className={classes.icon} />
+          <div className={useStyles.contactMethod}>
+            <WhatsAppIcon className={useStyles.icon} />
             <Link href="https://api.whatsapp.com/send?phone=8447704734">8447704734</Link>
           </div>
-          <div className={classes.contactMethod}>
-            <MailIcon className={classes.icon} />
+          <div className={useStyles.contactMethod}>
+            <MailIcon className={useStyles.icon} />
             <Link href="mailto:care@dotandkey.com">care@dotandkey.com</Link>
           </div>
         </div>

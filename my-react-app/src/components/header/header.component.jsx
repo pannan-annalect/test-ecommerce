@@ -1,7 +1,9 @@
 import React from "react";
 import logo from '../../assets/images/logo.jpg';
+import PersonIcon from '@mui/icons-material/Person';
 import { ShoppingBagOutlinedIcon,PersonOutlineIcon } from '@mui/icons-material';
-import { Grid, Box, Container,Link,IconButton, InputAdornment, TextField, Typography } from '@mui/material'
+import { Grid, Box, Container,IconButton, InputAdornment, TextField, Typography } from '@mui/material'
+import { Link } from 'react-router-dom';
 import './header.scss';
 const HeaderComponent = () => {
     return(
@@ -22,6 +24,7 @@ const HeaderComponent = () => {
                             <div className="myaccount">
                                 <Link sx={{mx:1}} href="#">Account</Link>
                                 <Link sx={{mx:1}} href="#">Cart</Link>
+                                <Link sx={{mx:1}} to="/auth"><PersonIcon/></Link>
                             </div>
                         </Grid>
                     </Grid>
