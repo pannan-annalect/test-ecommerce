@@ -14,7 +14,11 @@ import bestsellerimage from '../../assets/images/banner-1.jpg';
 import sliderimage from '../../assets/images/top-slider-image.jpg';
 import featureimage from '../../assets/images/feature-image.png';
 import appimage from '../../assets/images/app-image.jpg';
-import userimage from '../../assets/images/user-image.png';
+import TopCategories from "../../components/top-categories/TopCategories.component";
+import WatchIt from "../../components/watch-it/WatchIt.component";
+import ShopBy from "../../components/shop-by/ShopBy";
+import ingredientimage from '../../assets/images/ingredients.jpg';
+import CustomerReviews from "../../components/customer-reviews/CustomerReviews.component";
 
 
 const HomeComponent = () => {
@@ -43,36 +47,10 @@ const HomeComponent = () => {
           </Grid>
         </section>
 
-        <section className="top-categories">
-        <Grid container>
-            <Grid item xs={12}>
-              <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Shop Our</Typography>
-              <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Top Categories</Typography>
-              <ul className="home-categories">
-                <li>
-                  <Link className="active">Skin</Link>
-                </li>
-                <li>
-                  <Link>Skin</Link>
-                </li>
-                <li>
-                  <Link>Skin</Link>
-                </li>
-                <li>
-                  <Link>Skin</Link>
-                </li>
-              </ul>
-            </Grid>
-          </Grid>
-        </section>
+        <TopCategories/>
 
         <section>
-          <Grid container>
-            <Grid item xs={12}>
-              <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Watch it, Buy it</Typography>
-              <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Love it</Typography>
-            </Grid>
-          </Grid>
+          <WatchIt />
         </section>
 
         <section className="app-banner">
@@ -82,19 +60,14 @@ const HomeComponent = () => {
         </section>
 
         <section>
-          <Grid container>
-            <Grid item xs={12}>
-            <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Shop by</Typography>
-              <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Ingredients</Typography>
-            </Grid>
-          </Grid>
+          <ShopBy />
         </section>
 
         <section className="when-shared">
           <Grid container>
             <Grid item xs={12}>
-              <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>When shared</Typography>
-              <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Love is greater</Typography>
+              <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Love is greater</Typography>
+              <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>When shared</Typography>
               <div>
               <img src={sliderimage} />
               </div>
@@ -137,36 +110,22 @@ const HomeComponent = () => {
           <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Award winning</Typography>
           <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Skincare</Typography>
           <Typography variant="body1" className="gencont" textAlign={"center"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus ultrices felis nec luctus. Sed vel orci scelerisque</Typography>
-        </section>
-
-        <section className="home-testimonail">
-          <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Customer</Typography>
-          <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Reviews</Typography>
           <Grid container>
-            <Grid item xs={12}>
-            <Card className="" sx={{maxWidth:360,margin:'0 auto',boxShadow:'none',overflow:'visible',position:'relative'}}>
-              <div className="testimonial-image">
-                <img src={userimage} />
-              </div>
-              <CardContent sx={{paddingTop:'50px',boxShadow:'0 0 5px rgba(0,0,0,.1)',borderRadius:'10px'}}>
-                <Typography className="testimonial-rating" sx={{display: "flex"}}>
-                <Star sx={{ color: '#FFCE51',fontSize:16 }} />
-                <Star sx={{ color: '#FFCE51',fontSize:16 }} />
-                <Star sx={{ color: '#FFCE51',fontSize:16 }} />
-                <Star sx={{ color: '#FFCE51',fontSize:16 }} />
-                <Star sx={{ color: '#FFCE51',fontSize:16 }} />
-                </Typography>
-                <Typography className="testimonial-title" gutterBottom component="div" sx={{mx:1,mb:0}}>
-                    <em><strong>Lorem Ipsum</strong></em>
-                </Typography>
-                <Typography className="testimonial-desc" sx={{mx:1}}>
-                Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod purus mauris, nec pulvinar nulla tempus eget. Aenean id magna nec purus ornare laoreet. Sed dignissim ullamcorper odio, eget commodo ante dapibus congue. Vivamus ac fermentum ipsum. Vivamus porta leo a augue viverra fringilla vel in mi
-                </Typography>
-                <Typography className="testimonial-username" sx={{mt:4}}><strong>Name</strong> <Verified sx={{ml:0, color: '#2196f3',fontSize:30 }} /></Typography>
-              </CardContent>
-            </Card>
+            <Grid item xs={12} md={4} p={2}>
+              <img src={ingredientimage} />
+            </Grid>
+            <Grid item xs={12} md={4} p={2}>
+              <img src={ingredientimage} />
+            </Grid>
+            <Grid item xs={12} md={4} p={2}>
+              <img src={ingredientimage} />
             </Grid>
           </Grid>
+        </section>
+
+        <section className="">
+          
+          <CustomerReviews />
         </section>
       </>
     )
