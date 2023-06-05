@@ -15,7 +15,28 @@ const theme = createTheme({
     text:{
       primary:'#3c3c3c'
     },
+    primary:{
+      main:'#000000',
+    }
   },
+  components:{
+    MuiButton:{
+      styleOverrides:{
+        root:{
+          fontSize:'16px',
+          lineHeight:'30px',
+          minHeight:'54px'
+        }
+      }
+    },
+    MuiCard:{
+      styleOverrides:{
+        root:{
+          borderRadius:'5px'
+        }
+      }
+    }
+  }
 });
 function App() {
   return (

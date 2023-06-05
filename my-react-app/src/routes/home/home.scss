@@ -10,11 +10,21 @@ h2.hometitle{
     font-weight: 500;
     font-size: 33px;
 }
+.listing-outer{
+    padding: 0 15px;
+}
 .product-listing{
     text-align: center;
     .product-title{
         font-size: 13px;
         font-weight: 500;
+        text-transform: uppercase;
+        height: 32px;
+    }
+    .product-image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .product-rating{
         font-size: 13px;
@@ -26,11 +36,23 @@ h2.hometitle{
         }
     }
     .product-desc{
-
+        color: $secondarytext;
+        text-transform: uppercase;
+        font-size: 12px;
     }
-    .prod-amount{
+    .actual-amt{
+        text-decoration: line-through;
+        font-size: 13px;
+        color:$greycolor ;
+    }
+    .discounted-amt{
+        font-size:13px;
         color:$red;
     }
+}
+.primary-btn{
+    background-color: $titlecolor;
+    color:$whitecolor;
 }
 .home-categories{
     list-style: none;
