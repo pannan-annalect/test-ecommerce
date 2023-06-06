@@ -1,7 +1,18 @@
 .cusotmer-collection{
+  padding: 0 0 50px;
   .slider {
     &.slick-initialized{
       width: 100% !important;
+      padding: 40px 0 0;
+    }
+    .slick-prev,.slick-next{
+      z-index: 9;
+    }
+    .slick-prev{
+      left:10px
+    }
+    .slick-next{
+      right: 10px;
     }
     img {
       width: 100%;

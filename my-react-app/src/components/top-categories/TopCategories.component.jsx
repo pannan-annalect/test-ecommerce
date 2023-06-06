@@ -27,7 +27,7 @@ function TopCategories() {
     <div className="top-categories">
       <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Shop Our</Typography>
       <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Top Categories</Typography>
-      <ul className="home-categories">
+      <ul className="categories-listing">
         <li>
           <Link className="active">Skin</Link>
         </li>

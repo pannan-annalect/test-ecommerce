@@ -27,21 +27,21 @@ function ShopBy() {
       <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Shop by</Typography>
       <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Ingredients</Typography>
       <Slider {...settings}>
-        <div className="ingredient">
+        <div>
           <img src={ingredientimage} />
         </div>
-        <div className="ingredient">
+        <div>
         <img src={ingredientimage} />
         </div>
-        <div className="ingredient">
+        <div>
         <img src={ingredientimage} />
         </div>
-        <div className="ingredient">
+        <div>
         <img src={ingredientimage} />
         </div>
       </Slider>
-      <Grid textAlign={"center"}>
-        <Button variant="outlined" sx={{borderRadius:0,padding:'5px 15px',lineHeight:'normal', minHeight:'inherit'}} textAlign="center">Shop Now</Button>
+      <Grid textAlign={"center"} padding={'1% 0 0'}>
+        <Button variant="outlined" sx={{borderRadius:0,padding:'6px 15px',lineHeight:'normal', minHeight:'inherit'}}>Shop Now &gt;</Button>
       </Grid>
       
     </div>

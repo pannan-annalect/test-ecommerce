@@ -1,8 +1,26 @@
 .shop-by{
-    .slick-slider.slick-initialized{
+    padding: 2% 0 0;
+    .slider{
+        &.slick-initialized{
         width: auto !important;
+        padding: 2% 0 0;
+        .slick-slide{
+            img{
+                border-radius: 5px;
+                width: 96%;
+                margin: 5% 2%;
+                }
+            }
+        }
+        .slick-prev,.slick-next{
+            z-index: 9;
+        }
+        .slick-prev{
+            left:10px
+        }
+        .slick-next{
+            right: 10px;
+        }
     }
-    .ingredient{
-        padding: 0 8px;
-    }
+    
 }
