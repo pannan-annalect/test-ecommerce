@@ -4,4 +4,24 @@
     .slick-slider.slick-initialized{
         width: auto !important;
     }
+    .testimonial-image{
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+        width: 55%;
+        top:30px;
+        img{
+            border-radius: 20px;
+            width: 90%;
+        }
+    }
+    .testimonial-title, .testimonial-desc{
+        font-size: small;
+    }
+    .testimonial-username{
+        display: flex;
+        align-items: flex-start;
+        font-size: small;
+        justify-content: flex-end;
+    }
 }

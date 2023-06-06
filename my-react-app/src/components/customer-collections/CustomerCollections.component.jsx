@@ -20,7 +20,7 @@ function CustomerCollections() {
     <section className="cusotmer-collection">
       <Typography variant="h3" className="subtitle" textAlign={"center"}>Loved By</Typography>
       <Typography variant="h2" className="hometitle" textAlign={"center"}>2M + Customers</Typography>
-      <Slider {...settings}>
+      <Slider className="customer-slider" {...settings}>
         <div>
         <img src={sliderimage} />
         </div>

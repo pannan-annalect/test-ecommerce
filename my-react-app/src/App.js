@@ -33,10 +33,27 @@ const theme = createTheme({
     MuiCard:{
       styleOverrides:{
         root:{
-          borderRadius:'5px'
+          borderRadius:'5px',
+          border:'1px solid #c7c7c7',
+          boxShadow:'none'
+        }
+      }
+    },
+    MuiListItem:{
+      styleOverrides:{
+        root:{
+          fontFamily:'Roboto'
+        }
+      }
+    },
+    MuiLink:{
+      styleOverrides:{
+        root:{
+          textDecoration:'none'
         }
       }
     }
+    
   }
 });
 function App() {
