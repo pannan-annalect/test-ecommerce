@@ -1,0 +1,19 @@
+.watch-it{
+    margin:0 12%;
+    margin-bottom: 3%;
+    .slick-slider.slick-initialized{
+        width: auto !important;
+        .slick-list{
+            .slick-track{
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .listing-outer{
+            padding: 0 5px;
+            .product-listing{
+                max-width: 190px;
+            }
+        }
+    }
+}

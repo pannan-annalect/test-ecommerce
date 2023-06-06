@@ -6,6 +6,15 @@ body{
 a{
     text-decoration: none !important;
 }
+:focus-visible{
+    outline: none;
+}
+img{
+    max-width: 100%;
+    &:focus{
+        outline: none;
+    }
+}
 .container{
     max-width: 1300px;
     margin:0 auto;

@@ -16,8 +16,7 @@ function CardCarousel ({ slidesToShow, slidesToScroll, children }) {
     };
     return (
       <div>
-        <Typography variant="h3" className="subtitle" textAlign={"center"}>Shop our</Typography>
-        <Typography variant="h2" className="hometitle" textAlign={"center"} sx={{mb:3}}>New Arrivals</Typography>
+        
         <Slider {...settings}>
           {children}
         </Slider>
