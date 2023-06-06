@@ -45,6 +45,14 @@
             text-decoration: underline;
         }
     }
+    .content-two{
+        .ct-image{
+            text-align: center;
+            img{
+                max-width: 450px;
+            }
+        }
+    }
       
      .dot-key-section{
         width: 100%;
@@ -88,10 +96,53 @@
             }
         }
     }
+    .about-promise{
+        padding: 0 5%;
+        > h2{
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+    .promise-section{
+        display: flex;
+        flex-wrap: nowrap;
+        .promise-image{
+            width: 87px;
+            min-width: 87px;
+            padding: 0 15px 0 0;
+        }
+        .promise-content{
+            h2{
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin: 0 0 15px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
 }
+
 .about-items{
     li{
         padding: 0;
         font-weight: 700;
+    }
+}
+@media screen and (max-width:599px) {
+    .about-promise{
+        padding: 0;
+    }
+    .aboutus-content{
+        .promise-section{
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            .promise-image{
+                padding:0 0 10px;
+            }
+        }
     }
 }

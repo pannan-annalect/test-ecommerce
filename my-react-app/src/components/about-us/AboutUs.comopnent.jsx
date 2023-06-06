@@ -44,8 +44,8 @@ return(
                     <Link href="#">Phasellus feugiat lacus nec &gt;</Link>
                 </Typography>
             </Grid>
-            <Grid container>
-                <Grid item xs={12} md={6}>
+            <Grid className="content-two" container pb={'5%'}>
+                <Grid className="ct-image" item xs={12} md={6}>
                     <img src={aboutimage} />
                 </Grid>
                 <Grid item xs={12} md={6} display={'flex'} alignItems={'center'} justifyContent={'center'}>
@@ -68,12 +68,34 @@ return(
                     Lorem ipsum dolor
                 </Typography>
                 <Grid container>
-                    <Grid item xs={12} md={6}>
-                        <Grid container>
-                            <Grid item md={12} lg={2}>
+                    <Grid item xs={12} md={6} p={2}>
+                        <Grid container className="promise-section">
+                            <Grid className="promise-image">
                                 <img src={promiseimg} />
                             </Grid>
-                            <Grid item md={12} lg={10}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate metus, non maximus risus.</Grid>
+                            <Grid className="promise-content">
+                                <Typography variant="h2">
+                                Lorem ipsum dolor sit amet
+                                </Typography>
+                                <Typography variant="body1"> 
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate metus, non maximus risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate metus, non maximus risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate metus, non maximus risus.
+                                </Typography>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item xs={12} md={6} p={2}>
+                        <Grid container className="promise-section">
+                            <Grid className="promise-image">
+                                <img src={promiseimg} />
+                            </Grid>
+                            <Grid className="promise-content">
+                                <Typography variant="h2">
+                                Lorem ipsum dolor sit amet
+                                </Typography>
+                                <Typography variant="body1"> 
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate metus, non maximus risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate metus, non maximus risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate metus, non maximus risus.
+                                </Typography>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -82,56 +104,11 @@ return(
         
 
 
-        <div class="content-container">
-            <div class="row">
-                <div class="column">
-                
-                </div>
-                <div class="column">
-                    <h4>WE WON’T COMPROMISE,<br/> AND NEITHER SHOULD YOU</h4>
-                    <p>When we say we develop highly targeted remedial products, we mean it. From the ingredients, to the textural experience, we’re making sure that it’s all closely monitored, formulated and repeatedly tested. We simply won’t launch a product if it does not live up to a very high standard of quality and efficacy.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column">
-                <h4>BRINGING THE ‘CARE’<br/> BACK TO SKINCARE</h4>
-                <p>Our nature-forward approach to formulation ensures our ingredients and actives are in their most natural skin-friendly usable form. We take every precaution to eliminate anything that has the smallest chance to adversely affect your body and our environment. Every one of our products are tested clinically to ensure 100% dermatological safety.</p>
-                </div>
-                <div class="column">
-                <img src="https://www.dotandkey.com/cdn/shop/t/952/assets/2.jpg?v=27803939483609228111685356657" alt="Right Image"/>
-                </div>
-            </div>
-        </div>
-
-        <div className="info">
-           <h4>WE WON’T COMPROMISE,<br/> AND NEITHER SHOULD YOU</h4> 
-           <p>We do not use ingredients which will hinder the longevity of our natural resources, or harm our furry friends - be it their habitats or the animals themselves. We’ve also started a recycling programme for our containers. It’s the little things that matter, and every little effort can count positively towards saving our planet.</p>
-           <span className="links">Find out more about our Earth Program here > </span>
-        </div>
         
-        <div class="ingredients-container">
-            <div class="row">
-                <div class="column">
-                <img src="https://www.dotandkey.com/cdn/shop/t/952/assets/3.jpg?v=143273889409969834581685356657" alt="Left Image"/>
-                </div>
-                <div class="column">
-                <h4>WE KNOW WHEN TO SAY NO</h4> 
-                <p>Our products are completely free of nasty, and we only use IFRA certified fragrances and essential oils. We say NO to all the following ingredients :</p>
 
-                <ul>
-                    <li> -Parabens (methyl, propyl, etc.)</li>
-                    <li> -Sulphates (SLS, SLES)</li>
-                    <li> -Alcohol (Ethanol)</li>
-                    <li> -PABA</li>
-                    <li> -Phthalates</li>
-                    <li> -Triclosan</li>
-                    <li> -Formaldehyde Donors</li>
-                    <li> -Heavy metals</li>
-                    <li> -Synthetic Dyes</li>
-                </ul>
-                </div>
-            </div>
-        </div>
+       
+        
+        
 
         <div className="dot-key-section">
             <h2>THE DOT & KEY PROMISE</h2>
