@@ -1,8 +1,6 @@
 import React from "react";
 import { Typography,Card,CardActions,CardContent,CardMedia,Button, Grid, Box } from "@mui/material";
 import ImageCarousel from "../../components/image-carousel/ImageCarousel.component";
-import CustomerSection from "../../components/customer-section/CustomerSection.component";
-import CardCarousel from "../../components/card-carousel/CardCarousel.component";
 import CustomerCollections from "../../components/customer-collections/CustomerCollections.component";
 import NewArrivals from "../../components/new-arrivals/NewArrivals.component";
 import BestSellers from "../../components/best-sellers/BestSellers.component";
@@ -26,7 +24,6 @@ const HomeComponent = () => {
       <>
         <ImageCarousel />
         <CustomerCollections/>
-        <CustomerSection  />
         <NewArrivals />
         <BestSellers />
 
@@ -34,7 +31,7 @@ const HomeComponent = () => {
         <section className="spotlight">
           <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>In the</Typography>
           <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Spotlight</Typography>
-          <Grid container>
+          <Grid container className="spotlight-inner">
             <Grid item xs={12} md={6} className="sl-left">
               <img src={bestsellerimage} />
             </Grid>
@@ -66,9 +63,11 @@ const HomeComponent = () => {
         <section className="when-shared">
           <Grid container>
             <Grid item xs={12}>
-              <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Love is greater</Typography>
-              <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>When shared</Typography>
-              <div>
+              <div className="title-outer">
+                <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Love is greater</Typography>
+                <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>When shared</Typography>
+              </div>
+              <div className="shared-image">
               <img src={sliderimage} />
               </div>
               
@@ -77,8 +76,10 @@ const HomeComponent = () => {
         </section>
 
         <section className="container featured-content">
-          <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>With uncompormaised efficancy</Typography>
-          <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Clean Beauty</Typography>
+          <div className="title-outer">
+            <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Clean Beauty</Typography>
+            <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>With uncompormaised efficancy</Typography>
+          </div>
           <Grid container>
             <Grid item xs={12} sx={{px:5}}>
               <Typography variant="body1" className="featured-text" sx={{mb:2}} textAlign={"center"}>
@@ -107,8 +108,10 @@ const HomeComponent = () => {
         </section>
 
         <section className="award-winning">
-          <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Award winning</Typography>
-          <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Skincare</Typography>
+          <div className="title-outer">
+            <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Award winning</Typography>
+            <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Skincare</Typography>
+          </div>
           <Typography variant="body1" className="gencont" textAlign={"center"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus ultrices felis nec luctus. Sed vel orci scelerisque</Typography>
           <Grid container>
             <Grid item xs={12} md={4} p={2}>
@@ -124,7 +127,6 @@ const HomeComponent = () => {
         </section>
 
         <section className="">
-          
           <CustomerReviews />
         </section>
       </>

@@ -2,6 +2,9 @@
 img{
     max-width: 100%;
 }
+.title-outer{
+    padding: 1%;
+}
 h3.subtitle{
     font-weight: 300;
     font-size: 20px;
@@ -84,6 +87,10 @@ h2.hometitle{
 .spotlight{
     width: 95%;
     margin:0 auto;
+    padding: 0 0 3%;
+    .spotlight-inner{
+        padding: 2% 0 0;
+    }
     .sl-left{
         padding-right:10px;
     }
@@ -105,6 +112,9 @@ h2.hometitle{
     }
 }
 .when-shared{
+    .shared-image{
+        padding: 1% 0;
+    }
     img{
         width: 100%;
         object-fit: cover;
@@ -122,28 +132,19 @@ h2.hometitle{
     align-items: center;
     .image-details{
         width: 10%;
-        margin: 3%;
+        margin: 0 3%;
     }
 }
-.home-testimonail{
-    .testimonial-image{
-        text-align: center;
-        position: relative;
-        margin: 0 auto;
-        width: 55%;
-        top:45px;
-        img{
-            border-radius: 20px;
-            width: 90%;
+.award-winning{
+    padding: 0 0 2%;
+}
+.slick-dots {
+    li {
+        button{
+            &:before{
+                font-size: 12px;
+
+            }
         }
-    }
-    .testimonial-title, .testimonial-desc{
-        font-size: small;
-    }
-    .testimonial-username{
-        display: flex;
-        align-items: flex-start;
-        font-size: small;
-        justify-content: flex-end;
     }
 }

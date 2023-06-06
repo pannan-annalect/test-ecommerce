@@ -27,7 +27,7 @@ function BestSellers() {
     <div className="best-sellers">
       <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>Our</Typography>
       <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Bestsellers</Typography>
-      <ul className="home-categories">
+      <ul className="categories-listing">
         <li>
           <Link className="active">Face Creams</Link>
         </li>

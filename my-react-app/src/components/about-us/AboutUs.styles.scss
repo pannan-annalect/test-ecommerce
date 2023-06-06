@@ -1,109 +1,50 @@
-.aboutus-container{
-    width: 100%;
-    
-    .image-conatainer{
-        img{
-            width: 100%;
-        }
+.aboutus-content{
+    padding: 0 20px;
+    .about-banner{
+       text-align: center;
+       padding: 20px 0 0;
     }
-    .content{
-        p{
-            width: 100%;
-            max-width: 1220px;
+    .banner-content{
+        padding: 30px 50px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .grid-content{
+        max-width: 440px;
+        h2{
             font-size: 18px;
-            text-align: center;
-            margin: auto;
-            line-height: 32px;
+            line-height: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 0 20px;
         }
-    }
-
-    .content-container {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        margin: 0 auto;
-        .row {
-            display: flex;
-            flex-basis: 100%;
-            align-items: center;
-            justify-content: space-evenly;
-            .column {
-                flex-basis: 45%;
-                h4{
-                    line-height: 24px;
-                }
-                p{
-                    font-size: 14px;
-                    line-height: 22px;
-                    color: #3c3c3c;
-                }
-                img {
-                    max-width: 100%;
-                    height: auto;
-                  }
-              }
-          }
-    }
-
-    .info{
-        width: 100%;
-        max-width: 1220px;
-        margin: 0 auto;
-        h4{
+        p{
+            font-size: 14px;
             line-height: 24px;
         }
-        p{  
-            width: 1040px;
-            font-size: 14px;
-            line-height: 20px;
-        }
-        .links{
-            cursor: pointer;    
+    }
+    .content-one{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+            font-size: 18px;
+            line-height: 24px;
             font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 0 20px;
+        }
+        p{
             font-size: 14px;
-            line-height: 26px;
+            line-height: 24px;
+        }
+        a{
+            font-weight: 700;
             text-decoration: underline;
         }
     }
-      
-      
-    .ingredients-container {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        max-width: 1220px;
-        margin: 0 auto;
-        padding-top: 20px;
-        .row {
-            display: flex;
-            flex-basis: 100%;
-            justify-content: space-evenly;
-            .column {
-                flex-basis: 34%;
-                h4{
-                    line-height: 24px;
-                }
-                p{
-                    font-size: 14px;
-                    line-height: 22px;
-                    color: #3c3c3c;
-                }
-                img {
-                    max-width: 100%;
-                    height: auto;
-                  }
-
-                  ul{
-                    list-style-type: none;
-                    li{
-                        font-weight: 700;
-                        font-size: 18px;
-                        line-height: 22px;
-                    }
-                  }
-            }
-          }
-    } 
       
      .dot-key-section{
         width: 100%;
@@ -146,8 +87,11 @@
                 }
             }
         }
-        
-    } 
-      
-      
+    }
+}
+.about-items{
+    li{
+        padding: 0;
+        font-weight: 700;
+    }
 }
