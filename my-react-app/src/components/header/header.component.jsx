@@ -13,11 +13,13 @@ const HeaderComponent = () => {
                     <Grid container >
                         <Grid item xs={12} className="topheader">
                             <div className="logo-nav">
-                                <Box className="logo" component="img" src={logo} alt="logo" height={83}/>
+                                <Link to="/">
+                                    <Box className="logo" component="img" src={logo} alt="logo" height={83}/>
+                                </Link>
                                 <nav>
                                     <ul sx={{mx:2}} className="header-nav">
                                         <li><Link href="#">Best Sellers</Link></li>
-                                        <li><Link href="#">Shop all Products</Link></li>
+                                        <li><Link to="all-product">Shop all Products</Link></li>
                                     </ul>
                                 </nav>
                             </div>

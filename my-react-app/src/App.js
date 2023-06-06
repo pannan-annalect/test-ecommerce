@@ -7,6 +7,7 @@ import FooterComponent from './components/footer/footer.component';
 import AboutUs from './components/about-us/AboutUs.comopnent';
 import ContactUs from './components/contact-us/ContactUs.comopnent';
 import LoginSignUp from './components/login-signup/LoginSIgnUp.component';
+import AllProductListing from './components/product-listing/AllProductListing.component';
 const theme = createTheme({
   typography:{
     "fontFamily":'"Roboto","sans-serif"'
@@ -49,6 +50,7 @@ function App() {
               <Route path="/about-us" element={<AboutUs/>} />
               <Route path="/contact-us" element={<ContactUs/>} />
               <Route path="/auth" element={<LoginSignUp/>} />
+              <Route path="/all-product" element={<AllProductListing/>} />
             </Routes>
           <FooterComponent />
       </Router>

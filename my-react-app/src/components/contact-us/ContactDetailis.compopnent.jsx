@@ -36,7 +36,7 @@ const ContactDetails = () => {
 
   return (
     <div className={useStyles.root}>
-      <Typography variant="h5" component="header" className={useStyles.header}>
+      <Typography variant="h3" component="header" className={useStyles.header}>
         Contact Us
       </Typography>
       <div className={useStyles.contactDetails}>
