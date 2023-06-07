@@ -42,7 +42,7 @@
         }
         a{
             font-weight: 700;
-            text-decoration: underline;
+            text-decoration: underline !important;
         }
     }
     .content-two{
@@ -50,57 +50,16 @@
             text-align: center;
             img{
                 max-width: 450px;
-            }
-        }
-    }
-      
-     .dot-key-section{
-        width: 100%;
-        max-width: 1220px;
-        margin: 0 auto;
-        h2{
-            text-align: center;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 26px;
-            margin-bottom: 60px;
-        }
-        .promise-container{
-            display: flex;
-            align-items: center;
-            .promise-box{
-                display: flex;
-                width: 50%;
-                float: left;
-                padding-left: 90px;
-                margin: 20px 0;
-                .promise-txt{
-                    max-width: 360px;
-                    width: 100%;
-                    // min-height: 260px;
-                    padding-left: 20px;
-                    h3{
-                        font-size: 16px;
-                        line-height: 22px;
-                        font-weight: 700;
-                        padding: 0;
-                        margin: 0 0 20px 0;
-                    }
-                    p{
-                        font-size: 14px;
-                        line-height: 20px;
-                        padding: 0;
-                        margin: 0 0 20px 0;
-                    }
-                }
+                width: 100%;
             }
         }
     }
     .about-promise{
-        padding: 0 5%;
+        padding: 0 8%;
         > h2{
             font-size: 20px;
             font-weight: 700;
+            padding: 0 0 60px;
         }
     }
     .promise-section{
@@ -112,11 +71,15 @@
             padding: 0 15px 0 0;
         }
         .promise-content{
+            max-width: 360px;
+            width: 100%;
+            min-height: 260px;
             h2{
                 font-size: 16px;
                 font-weight: 700;
                 text-transform: uppercase;
                 margin: 0 0 15px;
+                text-align: left;
             }
             p{
                 font-size: 14px;
@@ -131,11 +94,24 @@
         font-weight: 700;
     }
 }
-@media screen and (max-width:599px) {
-    .about-promise{
-        padding: 0;
-    }
+@media screen and (max-width:899px) {
     .aboutus-content{
+        .promise-section{
+            .promise-content{
+                max-width: inherit;
+                min-height: inherit;
+            }
+        }
+    }
+}
+@media screen and (max-width:599px) {
+    .aboutus-content{
+        .about-promise{
+            padding: 0;
+            > h2{
+                padding: 0 0 20px;
+            }
+        }
         .promise-section{
             flex-wrap: wrap;
             justify-content: center;
@@ -143,6 +119,16 @@
             .promise-image{
                 padding:0 0 10px;
             }
+            .promise-content{
+                h2{
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .content-three{
+        .content-left{
+            order: 2;
         }
     }
 }
