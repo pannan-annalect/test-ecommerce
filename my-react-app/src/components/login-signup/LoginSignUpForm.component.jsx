@@ -16,12 +16,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '16px !important',
   },
   signUpLink: {
-    padding: '16px !important',
     textDecoration: 'none !important'
   },
   typography: {
     padding: theme.spacing(4),
-    
   },
 }));
 
@@ -74,74 +72,79 @@ const LoginForm = () => {
 
   return (
     <>
-      <Typography className={classes.typography} variant="h4" component="h1">
+      <Typography fontSize={'27px'} fontWeight={'700'} className={classes.typography} variant="h2">
         {signUp ? 'Sign Up' : 'Login'}
       </Typography>
 
       <form className={classes.formContainer} onSubmit={handleSubmit} noValidate>
         {signUp && (
           <>
-            <Grid className={classes.Grid} item xs={12} sm={12}>
-              <TextField
-                label="First Name"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                error={Boolean(errors.firstName)}
-                helperText={errors.firstName}
-                className={classes.textField}
-                fullWidth
-              />
-            </Grid>
-            <Grid className={classes.Grid}  item xs={12} sm={12}>
-              <TextField
-                label="Last Name"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                error={Boolean(errors.lastName)}
-                helperText={errors.lastName}
-                className={classes.textField}
-                fullWidth
-              />
+            <Grid container>
+              <Grid className={classes.Grid} item xs={12} sm={12}>
+                <TextField
+                  label="First Name"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  error={Boolean(errors.firstName)}
+                  helperText={errors.firstName}
+                  className={classes.textField}
+                  fullWidth
+                />
+              </Grid>
+              <Grid className={classes.Grid}  item xs={12} sm={12}>
+                <TextField
+                  label="Last Name"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  error={Boolean(errors.lastName)}
+                  helperText={errors.lastName}
+                  className={classes.textField}
+                  fullWidth
+                />
+              </Grid>
             </Grid>
           </>
         )}
-        <Grid className={classes.Grid}  item xs={12} sm={12}>
-          <TextField
-            label="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            error={Boolean(errors.email)}
-            helperText={errors.email}
-            className={classes.textField}
-            fullWidth
-          />
-        </Grid>
-        <Grid className={classes.Grid}  item xs={12} sm={12}>
-          <TextField
-            label="Password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            error={Boolean(errors.password)}
-            helperText={errors.password}
-            className={classes.textField}
-            fullWidth
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <Button type="submit" variant="contained" color="primary">
-            {signUp ? 'Sign Up' : 'Login'}
-          </Button>
-        </Grid>
-        <Grid item xs={12}>
-          <Link
-            component="button"
-            variant="body2"
-            className={classes.signUpLink}
-            onClick={() => setSignUp(!signUp)}
-          >
-            <Typography>{signUp ? 'Go back to Login' : 'Sign Up Here'}</Typography>
-          </Link>
+        <Grid container>
+          <Grid className={classes.Grid}  item xs={12} sm={12} py={1}>
+            <TextField
+              label="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              error={Boolean(errors.email)}
+              helperText={errors.email}
+              className={classes.textField}
+              fullWidth
+            />
+          </Grid>
+          <Grid className={classes.Grid}  item xs={12} sm={12} py={1}>
+            <TextField
+              label="Password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              error={Boolean(errors.password)}
+              helperText={errors.password}
+              className={classes.textField}
+              fullWidth
+            />
+          </Grid>
+          <Grid item xs={12} py={1}>
+            <Button sx={{width:'100%',borderRadius:'0'}} type="submit" variant="contained" color="primary">
+              {signUp ? 'Sign Up' : 'Login'}
+            </Button>
+          </Grid>
+          <Grid item xs={12} py={3} pl={0} textAlign={'left'}>
+            <Link
+              pl={0}
+              component="button"
+              variant="body2"
+              className={classes.signUpLink}
+              onClick={() => setSignUp(!signUp)}
+            >
+              <Typography fontSize={'18px'}>{signUp ? "Go back to Login" : "Don't have an account? Sign Up Here"}</Typography>
+            </Link>
+          </Grid>
         </Grid>
       </form>
     </>

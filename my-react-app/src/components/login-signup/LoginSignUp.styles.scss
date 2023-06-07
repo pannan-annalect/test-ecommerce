@@ -1,17 +1,49 @@
 .login-singup-container{
     width: 100%;
-    max-width: 75%;
+    max-width: 52%;
     margin: 0 auto;
     text-align: center;
-    .row{
+    padding: 4% 0;
+    .login-others{
         display: flex;
+        flex-direction: column;
         align-items: center;
-        width: 100%;
-        .column{
-            width: 50%;
-            .facebook-button{
-                padding-bottom: 20px;
+        justify-content: center;
+        .facebook-button, .google-button{
+            padding: 5px 0;
+            width: 100%;
+            button{
+                max-width: 320px;
+                border-radius: 0;
+                width: 100%;
+                min-height: 45px;
+                text-transform: capitalize;
             }
         }
+        .facebook-button{
+            button{
+                background:#3B5998 ;
+                &:hover{
+                    background:#0F65B3 ;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:899px) {
+    .login-singup-container{
+        padding: 20px 0;
+        .login-others{
+            .facebook-button, .google-button{
+                button{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:599px) {
+    .login-singup-container{
+        max-width: 100%;
     }
 }
