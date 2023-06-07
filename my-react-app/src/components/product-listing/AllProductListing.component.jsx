@@ -38,12 +38,10 @@ function AllProductListing() {
   return (
     <>  
         <div className="top-banner">
-            <Box className="logo" component="img" src={TopBanner} alt="logo" />
+            <Box component="img" src={TopBanner} />
         </div>
-        <h2>Product List</h2>
-        <div className="listing-container">
+        <div className="listing-container container">
             <div className="filter-container">
-                <div className="filter-header">Product Category Filter</div>
                 <div className="filter-drodown">
                     <ul value={filterType} onChange={handleFilterChange}>
                         <li value="">None</li>
@@ -57,9 +55,9 @@ function AllProductListing() {
                     </ul>
                 </div>
             </div>
-            <Grid container className="card-container" spacing={2}>
+            <Grid container className="card-container">
                 {filteredProducts.map((product, index) => (
-                    <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} key={index} p={2}>
                     <div className="listing-card">
                         <Card className="product-listing">
                             <div className="product-image">
