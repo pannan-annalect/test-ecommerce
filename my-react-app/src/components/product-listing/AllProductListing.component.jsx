@@ -33,9 +33,7 @@ function AllProductListing() {
   const filteredProducts = filterType
     ? products.filter((product) => product.type === filterType)
     : products;
-
-    // Extracting unique types from the products array
-    const types = [...new Set(products.map((product) => product.type))];
+    
 
   return (
     <>  
@@ -46,15 +44,18 @@ function AllProductListing() {
         <div className="listing-container">
             <div className="filter-container">
                 <div className="filter-header">Product Category Filter</div>
-            <FormControl className="filter-drodown">
-                <InputLabel id="dropdown-label">Select an option</InputLabel>
-                <Select labelId="dropdown-label"id="dropdown"  value={filterType} onChange={handleFilterChange}>
-                    <MenuItem value="">All</MenuItem>
-                    {types.map((type, index) => (
-                        <MenuItem value={type} key={index}>{type}</MenuItem>
-                    ))}
-                </Select>
-            </FormControl>
+                <div className="filter-drodown">
+                    <ul value={filterType} onChange={handleFilterChange}>
+                        <li value="">None</li>
+                        <li value="Moisturizer">Moisturizer</li>
+                        <li value="Sunscreen">Sunscreen</li>
+                        <li value="Serum">Serum</li>
+                        <li value="Face Wash">Face Wash</li>
+                        <li value="Lip Care">Lip Care</li>
+                        <li value="Face Mask">Face Mask</li>
+                        <li value="Face Toner">Face Toner</li>
+                    </ul>
+                </div>
             </div>
             <Grid container className="card-container" spacing={2}>
                 {filteredProducts.map((product, index) => (
