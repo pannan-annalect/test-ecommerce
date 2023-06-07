@@ -1,14 +1,14 @@
-.contactus-container{
-    width: 100%;
-    max-width: 75%;
-    margin: auto;
-    padding: 60px 40px 20px 40px;  
-    header{
-        h1{
-            font-weight: 700;   
-        }
+.contactus{
+    padding: 60px 40px 20px 40px;
+    .page-title{
+        font-size:27px;
+        font-weight: 700;
+        padding: 0 0 50px;
     }
-
+    p{
+        font-size: 18px;
+        line-height: 1.9;
+    }
     .contact-details{        
         .text-timimg{
             line-height: 28px;
@@ -110,5 +110,13 @@
             }
         }
     }
-      
+    .contact-forms{
+        max-width: 920px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:599px) {
+    .contactus{
+        padding: 20px 15px;
+    }
 }

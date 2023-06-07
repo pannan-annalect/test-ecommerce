@@ -43,8 +43,8 @@ const ContactForm = () => {
   };
 
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={6}>
+    <Grid container sx={{pt:5}} className='contact-forms'>
+      <Grid item xs={12} sm={6} px={2} py={1}>
         <TextField
           fullWidth
           label="Name"
@@ -54,7 +54,7 @@ const ContactForm = () => {
           helperText={errors.name}
         />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid item xs={12} sm={6} px={2} py={1}>
         <TextField
           fullWidth
           label="Email"
@@ -65,7 +65,7 @@ const ContactForm = () => {
           helperText={errors.email}
         />
       </Grid>
-      <Grid item xs={12}>
+      <Grid item xs={12} px={2} py={1}>
         <TextField
           fullWidth
           label="Message"
@@ -77,8 +77,8 @@ const ContactForm = () => {
           helperText={errors.message}
         />
       </Grid>
-      <Grid item xs={12}>
-        <Button variant="contained" color="primary" onClick={handleSubmit}>Submit</Button>
+      <Grid item xs={12} px={2} py={1}>
+        <Button sx={{borderRadius:0,padding:'12px 25px', minHeight:'42px',lineHeight:'1.42'}} variant="contained" color="primary" onClick={handleSubmit}>Send</Button>
       </Grid>
     </Grid>
   );
