@@ -28,16 +28,16 @@ function ShopBy() {
       <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Ingredients</Typography>
       <Slider {...settings}>
         <div>
-          <img src={ingredientimage} />
+          <img src={ingredientimage} alt=""/>
         </div>
         <div>
-        <img src={ingredientimage} />
+        <img src={ingredientimage} alt=""/>
         </div>
         <div>
-        <img src={ingredientimage} />
+        <img src={ingredientimage} alt=""/>
         </div>
         <div>
-        <img src={ingredientimage} />
+        <img src={ingredientimage} alt=""/>
         </div>
       </Slider>
       <Grid textAlign={"center"} padding={'1% 0 0'}>

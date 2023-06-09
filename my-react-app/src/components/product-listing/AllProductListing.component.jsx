@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TopBanner from '../../assets/images/top-slider-image.jpg';
-import { Typography,Card,CardActions,CardContent,Button, Grid, Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { Typography,Card,CardActions,CardContent,Button, Grid, Box } from "@mui/material";
 import "./ProductListing.scss";
 import productimage from '../../assets/images/best-seller.jpg';
 import {Star} from '@mui/icons-material';
@@ -25,8 +25,8 @@ function AllProductListing() {
 
   const [filterType, setFilterType] = useState('');
 
-  const handleFilterChange = (event) => {
-    setFilterType(event.target.value);
+  const handleFilterChange = (e) => {
+    setFilterType(e.currentTarget.textContent);
   };
 
   // Filter the products based on the selected type
@@ -43,15 +43,15 @@ function AllProductListing() {
         <div className="listing-container container">
             <div className="filter-container">
                 <div className="filter-drodown">
-                    <ul value={filterType} onChange={handleFilterChange}>
-                        <li value="">None</li>
-                        <li value="Moisturizer">Moisturizer</li>
-                        <li value="Sunscreen">Sunscreen</li>
-                        <li value="Serum">Serum</li>
-                        <li value="Face Wash">Face Wash</li>
-                        <li value="Lip Care">Lip Care</li>
-                        <li value="Face Mask">Face Mask</li>
-                        <li value="Face Toner">Face Toner</li>
+                    <ul value={filterType}>
+                        <li value="">All</li>
+                        <li value="Moisturizer" onClick={handleFilterChange}>Moisturizer</li>
+                        <li value="Sunscreen" onClick={handleFilterChange}>Sunscreen</li>
+                        <li value="Serum" onClick={handleFilterChange}>Serum</li>
+                        <li value="Face Wash" onClick={handleFilterChange}>Face Wash</li>
+                        <li value="Lip Care" onClick={handleFilterChange}>Lip Care</li>
+                        <li value="Face Mask" onClick={handleFilterChange}>Face Mask</li>
+                        <li value="Face Toner" onClick={handleFilterChange}>Face Toner</li>
                     </ul>
                 </div>
             </div>
@@ -61,7 +61,7 @@ function AllProductListing() {
                     <div className="listing-card">
                         <Card className="product-listing">
                             <div className="product-image">
-                                <img src={product.img} />
+                                <img src={product.img} alt=""/>
                             </div>
                             <CardContent sx={{py:1}}>
                                 <Typography className="product-rating" sx={{display: "flex",justifyContent:"center",mb:1}}>
