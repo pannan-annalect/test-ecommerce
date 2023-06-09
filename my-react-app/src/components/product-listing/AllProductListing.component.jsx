@@ -29,6 +29,10 @@ function AllProductListing() {
     setFilterType(e.currentTarget.textContent);
   };
 
+  const removeFilterChange = (e) => {
+    setFilterType('');
+  };
+
   // Filter the products based on the selected type
   const filteredProducts = filterType
     ? products.filter((product) => product.type === filterType)
@@ -44,7 +48,7 @@ function AllProductListing() {
             <div className="filter-container">
                 <div className="filter-drodown">
                     <ul value={filterType}>
-                        <li value="">All</li>
+                        <li value="" onClick={removeFilterChange}>All</li>
                         <li value="Moisturizer" onClick={handleFilterChange}>Moisturizer</li>
                         <li value="Sunscreen" onClick={handleFilterChange}>Sunscreen</li>
                         <li value="Serum" onClick={handleFilterChange}>Serum</li>
