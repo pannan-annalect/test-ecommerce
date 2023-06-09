@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Typography } from "@mui/material";
 import "./CustomerCollections.scss";
 import Slider from "react-slick";
@@ -22,10 +21,10 @@ function CustomerCollections() {
       <Typography variant="h2" className="hometitle" textAlign={"center"}>2M + Customers</Typography>
       <Slider className="customer-slider" {...settings}>
         <div>
-        <img src={sliderimage} />
+        <img src={sliderimage} alt=""/>
         </div>
         <div>
-        <img src={sliderimage} />
+        <img src={sliderimage} alt=""/>
         </div>
       </Slider>
     </section>

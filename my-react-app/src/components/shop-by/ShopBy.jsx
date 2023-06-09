@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-import { Typography,Link, Button, Grid} from "@mui/material";
-import ProductListing from "../product-listing/ProductListing.component";
+import { Typography, Button, Grid} from "@mui/material";
 import Slider from "react-slick";
 import "./ShopBy.scss";
 import ingredientimage from '../../assets/images/ingredients.jpg';

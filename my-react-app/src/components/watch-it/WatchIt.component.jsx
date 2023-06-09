@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { Typography,Link} from "@mui/material";
+import { Typography} from "@mui/material";
 import ProductListing from "../product-listing/ProductListing.component";
 import Slider from "react-slick";
 import "./WatchIt.scss";

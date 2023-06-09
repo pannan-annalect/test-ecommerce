@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import "./ImageCarousel.style.scss";
 import Slider from "react-slick";
 import sliderimage from '../../assets/images/top-slider-image.jpg';
@@ -26,13 +25,13 @@ function ImageCarousel() {
     <div className="home-top-slider">
         <Slider {...settings}>
           <div>
-            <img src={sliderimage} />
+            <img src={sliderimage} alt=""/>
           </div>
           <div>
-          <img src={sliderimage} />
+          <img src={sliderimage} alt=""/>
           </div>
           <div>
-          <img src={sliderimage} />
+          <img src={sliderimage} alt=""/>
           </div>
         </Slider>
       </div>

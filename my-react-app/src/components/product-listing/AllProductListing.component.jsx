@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TopBanner from '../../assets/images/top-slider-image.jpg';
 import { Typography,Card,CardActions,CardContent,Button, Grid, Box } from "@mui/material";
-import "./ProductListing.scss";
+import "./ProductListing.styles.scss";
 import productimage from '../../assets/images/best-seller.jpg';
 import {Star} from '@mui/icons-material';
 

@@ -17,7 +17,7 @@ return(
             </Typography>
             <Grid container>
                 <Grid item xs={12} sm={6} px={1}>
-                    <img src={aboutimage} />
+                    <img src={aboutimage}  alt=""/>
                 </Grid>
                 <Grid item xs={12} sm={6} px={1} display={'flex'} alignItems={'center'} justifyContent={'center'}>
                     <Grid className="grid-content">
@@ -34,7 +34,7 @@ return(
                     </Grid>
                 </Grid>
                 <Grid item xs={12} sm={6} px={1}>
-                    <img src={aboutimage} />
+                    <img src={aboutimage} alt=""/>
                 </Grid>
             </Grid>
             <Grid className="content-one">
@@ -46,7 +46,7 @@ return(
             </Grid>
             <Grid className="content-two" container pb={'5%'}>
                 <Grid className="ct-image" item xs={12} md={6}>
-                    <img src={aboutimage} />
+                    <img src={aboutimage} alt=""/>
                 </Grid>
                 <Grid item xs={12} md={6} display={'flex'} alignItems={'center'} justifyContent={'center'}>
                     <Grid className="grid-content">
@@ -71,7 +71,7 @@ return(
                     <Grid item xs={12} md={6} p={2}>
                         <Grid container className="promise-section">
                             <Grid className="promise-image">
-                                <img src={promiseimg} />
+                                <img src={promiseimg} alt=""/>
                             </Grid>
                             <Grid className="promise-content">
                                 <Typography variant="h2">
@@ -86,7 +86,7 @@ return(
                     <Grid item xs={12} md={6} p={2}>
                         <Grid container className="promise-section">
                             <Grid className="promise-image">
-                                <img src={promiseimg} />
+                                <img src={promiseimg} alt=""/>
                             </Grid>
                             <Grid className="promise-content">
                                 <Typography variant="h2">
@@ -101,7 +101,7 @@ return(
                     <Grid item xs={12} md={6} p={2}>
                         <Grid container className="promise-section">
                             <Grid className="promise-image">
-                                <img src={promiseimg} />
+                                <img src={promiseimg} alt=""/>
                             </Grid>
                             <Grid className="promise-content">
                                 <Typography variant="h2">
@@ -116,7 +116,7 @@ return(
                     <Grid item xs={12} md={6} p={2}>
                         <Grid container className="promise-section">
                             <Grid className="promise-image">
-                                <img src={promiseimg} />
+                                <img src={promiseimg} alt=""/>
                             </Grid>
                             <Grid className="promise-content">
                                 <Typography variant="h2">
@@ -131,7 +131,7 @@ return(
                     <Grid item xs={12} md={6} p={2}>
                         <Grid container className="promise-section">
                             <Grid className="promise-image">
-                                <img src={promiseimg} />
+                                <img src={promiseimg} alt=""/>
                             </Grid>
                             <Grid className="promise-content">
                                 <Typography variant="h2">
@@ -146,7 +146,7 @@ return(
                     <Grid item xs={12} md={6} p={2}>
                         <Grid container className="promise-section">
                             <Grid className="promise-image">
-                                <img src={promiseimg} />
+                                <img src={promiseimg} alt=""/>
                             </Grid>
                             <Grid className="promise-content">
                                 <Typography variant="h2">

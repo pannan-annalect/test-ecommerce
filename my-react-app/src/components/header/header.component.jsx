@@ -2,7 +2,7 @@ import React from "react";
 import logo from '../../assets/images/logo.png';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
-import { Grid, Box, Container,IconButton, InputAdornment, TextField, Typography } from '@mui/material'
+import { Grid, Box, Container } from '@mui/material'
 import { Link } from 'react-router-dom';
 import './header.scss';
 const HeaderComponent = () => {

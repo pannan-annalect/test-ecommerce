@@ -1,4 +1,4 @@
-import { Typography, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import FacebookLoginButton from './FbButton.component';
 import GoogleLoginButton from './GoogleButton.component';
 import LoginForm from './LoginSignUpForm.component';
