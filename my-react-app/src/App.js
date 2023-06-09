@@ -1,13 +1,19 @@
 import './app.scss';
+import { Suspense, lazy } from 'react';
 import { createTheme,ThemeProvider } from "@mui/material";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HeaderComponent from './components/header/header.component';
-import HomeComponent from './routes/home/home.component';
-import FooterComponent from './components/footer/footer.component';
-import AboutUs from './components/about-us/AboutUs.comopnent';
-import ContactUs from './components/contact-us/ContactUs.comopnent';
-import LoginSignUp from './components/login-signup/LoginSIgnUp.component';
-import AllProductsListing from './routes/All-Products/AllProducts.component';
+
+const Loader = lazy(() => import('./components/loader/Loader.component'));
+const HeaderComponent = lazy(() => import('./components/header/header.component'));
+const HomeComponent = lazy(() => import('./routes/home/home.component'));
+const FooterComponent = lazy(() => import('./components/footer/footer.component'));
+const AboutUs = lazy(() => import('./components/about-us/AboutUs.comopnent'));
+const ContactUs = lazy(() => import('./components/contact-us/ContactUs.comopnent'));
+const LoginSignUp = lazy(() => import('./components/login-signup/LoginSIgnUp.component'));
+const AllProductsListing = lazy(() => import('./routes/All-Products/AllProducts.component'));
+
+
+
 const theme = createTheme({
   typography:{
     "fontFamily":'"Roboto","sans-serif"'
@@ -59,19 +65,21 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">   
-        <Router>  
-          <HeaderComponent/>   
-            <Routes>      
-              <Route path="/" element={<HomeComponent/>} />
-              <Route path="/about-us" element={<AboutUs/>} />
-              <Route path="/contact-us" element={<ContactUs/>} />
-              <Route path="/auth" element={<LoginSignUp/>} />
-              <Route path="/all-product" element={<AllProductsListing/>} />
-            </Routes>
-          <FooterComponent />
-      </Router>
-      </div>
+      <Suspense fallback={<Loader/>}>
+        <div className="App">   
+          <Router>  
+            <HeaderComponent/>   
+              <Routes>      
+                <Route path="/" element={<HomeComponent/>} />
+                <Route path="/about-us" element={<AboutUs/>} />
+                <Route path="/contact-us" element={<ContactUs/>} />
+                <Route path="/auth" element={<LoginSignUp/>} />
+                <Route path="/all-product" element={<AllProductsListing/>} />
+              </Routes>
+            <FooterComponent />
+        </Router>
+        </div>
+      </Suspense>
     </ThemeProvider>
   );
 }
