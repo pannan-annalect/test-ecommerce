@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
-import { Typography,Card,CardActions,CardContent,CardMedia,Button, Grid, Box } from "@mui/material";
-import "./ProductListing.scss";
+import { Typography,Card,CardActions,CardContent,Button, Grid } from "@mui/material";
+import "./ProductListing.styles.scss";
 import productimage from '../../assets/images/best-seller.jpg';
-import {Star,Verified} from '@mui/icons-material';
+import {Star} from '@mui/icons-material';
 
 function ProductListing() {
   return (
@@ -10,7 +9,7 @@ function ProductListing() {
     <div className="listing-outer">
         <Card className="product-listing">
             <div className="product-image">
-                <img src={productimage} />
+                <img src={productimage} alt=""/>
             </div>
         <CardContent sx={{py:1}}>
             <Typography className="product-rating" sx={{display: "flex",justifyContent:"center",mb:1}}>

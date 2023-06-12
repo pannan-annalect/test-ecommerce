@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
-import { Typography,Card,CardActions,CardContent,CardMedia,Button, Grid, Box } from "@mui/material";
+import { Typography,Card,CardContent } from "@mui/material";
 import {Star,Verified} from '@mui/icons-material';
 import userimage from '../../assets/images/user-image.png';
-import ProductListing from "../product-listing/ProductListing.component";
 import Slider from "react-slick";
 import "./CustomerReviews.scss";
 
@@ -35,7 +33,7 @@ function CustomerReviews() {
         <div>
         <Card className="" sx={{maxWidth:360,margin:'0 auto',boxShadow:'none',border:'none',overflow:'visible',position:'relative',padding:'0 0 20px'}}>
               <div className="testimonial-image">
-                <img src={userimage} />
+                <img src={userimage} alt=""/>
               </div>
               <CardContent sx={{paddingTop:'40px',boxShadow:'0 0 5px rgba(0,0,0,.1)',borderRadius:'10px'}}>
                 <Typography className="testimonial-rating" sx={{display: "flex"}}>
@@ -58,7 +56,7 @@ function CustomerReviews() {
         <div>
         <Card className="" sx={{maxWidth:360,margin:'0 auto',boxShadow:'none',border:'none',overflow:'visible',position:'relative',padding:'0 0 20px'}}>
               <div className="testimonial-image">
-                <img src={userimage} />
+                <img src={userimage} alt=""/>
               </div>
               <CardContent sx={{paddingTop:'40px',boxShadow:'0 0 5px rgba(0,0,0,.1)',borderRadius:'10px'}}>
                 <Typography className="testimonial-rating" sx={{display: "flex"}}>
@@ -81,7 +79,7 @@ function CustomerReviews() {
         <div>
         <Card className="" sx={{maxWidth:360,margin:'0 auto',boxShadow:'none',border:'none',overflow:'visible',position:'relative',padding:'0 0 20px'}}>
               <div className="testimonial-image">
-                <img src={userimage} />
+                <img src={userimage} alt=""/>
               </div>
               <CardContent sx={{paddingTop:'40px',boxShadow:'0 0 5px rgba(0,0,0,.1)',borderRadius:'10px'}}>
                 <Typography className="testimonial-rating" sx={{display: "flex"}}>
@@ -104,7 +102,7 @@ function CustomerReviews() {
         <div>
         <Card className="" sx={{maxWidth:360,margin:'0 auto',boxShadow:'none',border:'none',overflow:'visible',position:'relative',padding:'0 0 20px'}}>
               <div className="testimonial-image">
-                <img src={userimage} />
+                <img src={userimage} alt=""/>
               </div>
               <CardContent sx={{paddingTop:'40px',boxShadow:'0 0 5px rgba(0,0,0,.1)',borderRadius:'10px'}}>
                 <Typography className="testimonial-rating" sx={{display: "flex"}}>

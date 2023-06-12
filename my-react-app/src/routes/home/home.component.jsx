@@ -1,13 +1,11 @@
 import React from "react";
-import { Typography,Card,CardActions,CardContent,CardMedia,Button, Grid, Box } from "@mui/material";
+import { Typography, Grid, Box } from "@mui/material";
 import ImageCarousel from "../../components/image-carousel/ImageCarousel.component";
 import CustomerCollections from "../../components/customer-collections/CustomerCollections.component";
 import NewArrivals from "../../components/new-arrivals/NewArrivals.component";
 import BestSellers from "../../components/best-sellers/BestSellers.component";
 import './home.scss';
-import {Star,Verified} from '@mui/icons-material';
 import { Link } from "react-router-dom";
-import productimage from '../../assets/images/best-seller.jpg';
 import bestsellerimage from '../../assets/images/banner-1.jpg';
 import sliderimage from '../../assets/images/top-slider-image.jpg';
 import featureimage from '../../assets/images/feature-image.png';
@@ -33,13 +31,13 @@ const HomeComponent = () => {
           <Typography variant="h2" className="hometitle" textAlign={"center"} textTransform={"uppercase"}>Spotlight</Typography>
           <Grid container className="spotlight-inner">
             <Grid item xs={12} md={6} className="sl-left">
-              <img src={bestsellerimage} />
+              <img src={bestsellerimage} alt="" />
             </Grid>
             <Grid item xs={12} md={6} className="sl-right">
-              <img src={bestsellerimage} />
+              <img src={bestsellerimage} alt="" />
             </Grid>
             <Grid item xs={12} className="sl-bottom">
-            <img src={sliderimage} />
+            <img src={sliderimage} alt=""/>
             </Grid>
           </Grid>
         </section>
@@ -52,7 +50,7 @@ const HomeComponent = () => {
 
         <section className="app-banner">
           <Link>
-            <img src={appimage} />
+            <img src={appimage} alt=""/>
           </Link>
         </section>
 
@@ -68,7 +66,7 @@ const HomeComponent = () => {
                 <Typography variant="h3" className="subtitle" textAlign={"center"} textTransform={"uppercase"}>When shared</Typography>
               </div>
               <div className="shared-image">
-              <img src={sliderimage} />
+              <img src={sliderimage} alt=""/>
               </div>
               
             </Grid>
@@ -94,16 +92,16 @@ const HomeComponent = () => {
 
         <section className="featured-image">
                 <Box className="image-details">
-                  <img src={featureimage} />
+                  <img src={featureimage} alt=""/>
                 </Box>
                 <Box className="image-details">
-                <img src={featureimage} />
+                <img src={featureimage} alt=""/>
                 </Box>
                 <Box className="image-details">
-                <img src={featureimage} />
+                <img src={featureimage} alt=""/>
                 </Box>
                 <Box className="image-details">
-                <img src={featureimage} />
+                <img src={featureimage} alt=""/>
                 </Box>
         </section>
 
@@ -115,13 +113,13 @@ const HomeComponent = () => {
           <Typography variant="body1" className="gencont" textAlign={"center"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus ultrices felis nec luctus. Sed vel orci scelerisque</Typography>
           <Grid container>
             <Grid item xs={12} md={4} p={2}>
-              <img src={ingredientimage} />
+              <img src={ingredientimage} alt=""/>
             </Grid>
             <Grid item xs={12} md={4} p={2}>
-              <img src={ingredientimage} />
+              <img src={ingredientimage} alt=""/>
             </Grid>
             <Grid item xs={12} md={4} p={2}>
-              <img src={ingredientimage} />
+              <img src={ingredientimage} alt=""/>
             </Grid>
           </Grid>
         </section>

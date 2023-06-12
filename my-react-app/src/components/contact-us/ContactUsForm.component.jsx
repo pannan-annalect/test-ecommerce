@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, TextField, Typography, Button } from '@mui/material';
+import { Grid, TextField, Button } from '@mui/material';
 
 const ContactForm = () => {
   const [name, setName] = useState('');

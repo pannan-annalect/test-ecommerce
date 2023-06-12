@@ -1,7 +1,8 @@
 import React from "react";
-import { Grid, Box, Container,IconButton, InputAdornment, TextField, Typography } from '@mui/material'
+import { Grid, Container, Typography } from '@mui/material'
 import './footer.scss';
 import { Link } from 'react-router-dom';
+
 const FooterComponent = () => {
     return(
         <>

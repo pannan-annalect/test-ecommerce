@@ -1,8 +1,4 @@
-import { useState, useEffect } from "react";
-import "./CustomerSection.style.scss"
-import { Typography } from "@mui/material";
-
-
+import "./CustomerSection.style.scss";
 
 function CustomerSection() {
   
