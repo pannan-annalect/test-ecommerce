@@ -10,7 +10,7 @@ function NewArrivals() {
   const settings = {
     className: "slider",
     //innerWidth:"100%",
-    arrows:true,
+    arrows:false,
     swipeToSlide: true,
     dots: false,
     infinite: true,
@@ -23,6 +23,29 @@ function NewArrivals() {
     autoplaySpeed:4000,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 899,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 599,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
   };
   return (
     <>

@@ -2,13 +2,13 @@
     padding: 2% 0 0;
     .slider{
         &.slick-initialized{
-        width: auto !important;
-        padding: 2% 0 0;
-        .slick-slide{
-            img{
-                border-radius: 5px;
-                width: 96%;
-                margin: 5% 2%;
+            width: auto !important;
+            padding: 2% 0 0;
+            .slick-slide{
+                img{
+                    border-radius: 5px;
+                    width: 96%;
+                    margin: 5% 2%;
                 }
             }
         }
@@ -22,5 +22,19 @@
             right: 10px;
         }
     }
-    
+}
+@media screen and (max-width:899px) {
+    .shop-by{
+        padding: 2% 15px;
+        .slider{
+            &.slick-initialized{
+                .slick-slide{
+                    img{
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
 }

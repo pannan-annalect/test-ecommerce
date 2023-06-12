@@ -1,6 +1,6 @@
 @import '../../common.scss';
 .top-categories{
-    margin:0 12%;
+    margin:0 20%;
     margin-bottom: 3%;
     .categories-listing{
         list-style: none;
@@ -29,5 +29,14 @@
     }
     .slick-slider.slick-initialized{
         width: auto !important;
+    }
+}
+@media screen and (max-width:899px) {
+    .top-categories{
+        margin:0 5%;
+        margin-bottom: 2%;
+        .listing-outer{
+            padding: 0;
+        }
     }
 }

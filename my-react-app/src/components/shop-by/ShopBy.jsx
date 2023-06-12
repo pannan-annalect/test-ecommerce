@@ -9,7 +9,7 @@ function ShopBy() {
   const settings = {
     className: "slider",
     //innerWidth:"100%",
-    arrows:true,
+    arrows:false,
     swipeToSlide: true,
     dots: false,
     infinite: true,
@@ -20,6 +20,17 @@ function ShopBy() {
     slidesToScroll: 1,
     //autoplay:true,
     speed: 500,
+    responsive: [
+      {
+        breakpoint: 899,
+        settings: {
+          variableWidth:false,
+          centerMode:false,
+          infinite:true,
+          centerPadding:'0',
+        }
+      },
+    ]
   };
   return (
     <>

@@ -10,7 +10,7 @@ function CustomerReviews() {
   const settings = {
     className: "slider",
     //innerWidth:"100%",
-    arrows:true,
+    arrows:false,
     swipeToSlide: true,
     dots: false,
     infinite: true,

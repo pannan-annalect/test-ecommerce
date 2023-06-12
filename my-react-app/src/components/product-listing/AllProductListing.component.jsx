@@ -42,7 +42,7 @@ function AllProductListing() {
         </div>
         <div className="listing-container container">
             <div className="filter-container">
-                <div className="filter-drodown">
+                <div className="filter-dropdown">
                     <ul value={filterType} onChange={handleFilterChange}>
                         <li value="">None</li>
                         <li value="Moisturizer">Moisturizer</li>

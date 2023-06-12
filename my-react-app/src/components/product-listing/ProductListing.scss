@@ -16,22 +16,13 @@
         display: block;
     }
     .filter-container{
-        width: 100%;
-        padding: 50px 0;
-        /* For Tablet View */
-        @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-            width: 100%;
-        }
-        /* For Mobile Phones Portrait or Landscape View */
-        @media screen and (max-device-width: 767px)  {
-            width: 100%;
-        }
+        padding: 50px 15px;
         .filter-header{
             font-weight: 600;
             text-align: center;
             padding-bottom: 20px;
         }
-        .filter-drodown{
+        .filter-dropdown{
             width: 100%;
             max-width: 900px;
             margin: auto;
@@ -40,7 +31,7 @@
                 overflow: auto;
                 position: relative;
                 margin: 0;
-                padding: 0;
+                padding: 0 0 1px;
                 list-style: none;
                 li{
                     min-width: fit-content;
@@ -55,9 +46,25 @@
                     font-weight: 600;
                     color: #000;
                     cursor: pointer;
-                    span{
-                        
-                    }
+                }
+                &::-webkit-scrollbar {
+                    width: .25rem;
+                    height: .25rem;
+                }
+                
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: #f5f5f5;
+                }
+                
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #b1b1b1;
+                }
+                
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #b1b1b1;
                 }
             }
         }
