@@ -6,20 +6,53 @@ import "./WatchIt.scss";
 function WatchIt() {
   const settings = {
     className: "slider",
-    innerWidth:"auto",
-    arrows:true,
+    //innerWidth:"auto",
+    arrows:false,
     swipeToSlide: true,
     dots: false,
-    infinite: false,
+    infinite: true,
     draggable: true,
     accessibility: false,
     centerMode: true,
     variableWidth:true,
+    centerPadding:'0',
     //autoplay:true,
     speed: 500,
     autoplaySpeed:4000,
     slidesToShow: 5,
     slidesToScroll: 5,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          variableWidth:false,
+          centerMode:false,
+          infinite:false,
+        }
+      },
+      {
+        breakpoint: 899,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          variableWidth:false,
+          centerMode:false,
+          infinite:false,
+        }
+      },
+      {
+        breakpoint: 599,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth:false,
+          centerMode:false,
+          infinite:false,
+        }
+      },
+    ]
   };
   return (
     <>

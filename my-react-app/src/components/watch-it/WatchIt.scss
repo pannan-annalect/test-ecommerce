@@ -18,3 +18,20 @@
         }
     }
 }
+@media screen and (max-width:1024px) {
+    .watch-it{
+        .slick-slider.slick-initialized{
+            .listing-outer{
+                .product-listing{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:899px) {
+    .watch-it{
+        margin:0 5%;
+        margin-bottom: 2%;
+    }
+}

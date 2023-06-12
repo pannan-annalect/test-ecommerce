@@ -7,7 +7,7 @@ function BestSellers() {
   const settings = {
     className: "slider",
     //innerWidth:"100%",
-    arrows:true,
+    arrows:false,
     swipeToSlide: true,
     dots: false,
     infinite: false,
@@ -20,6 +20,29 @@ function BestSellers() {
     autoplaySpeed:4000,
     slidesToShow: 4,
     slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 899,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 599,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
   };
   return (
     <>

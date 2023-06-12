@@ -5,3 +5,15 @@
         width: auto !important;
     }
 }
+@media screen and (max-width:899px) {
+    .new-arrivals{
+        margin:0 5%;
+        margin-bottom: 4%;
+    }
+}
+@media screen and (max-width:599px) {
+    .new-arrivals{
+        margin:0 2%;
+        margin-bottom: 4%;
+    }
+}  

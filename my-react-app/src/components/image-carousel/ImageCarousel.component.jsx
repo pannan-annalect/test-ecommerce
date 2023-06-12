@@ -6,7 +6,7 @@ function ImageCarousel() {
   const settings = {
     className: "slider",
     //innerWidth:"100%",
-    arrows:true,
+    arrows:false,
     swipeToSlide: true,
     dots: true,
     infinite: true,
