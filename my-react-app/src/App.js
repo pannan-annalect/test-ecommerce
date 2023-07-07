@@ -11,6 +11,8 @@ const AboutUs = lazy(() => import('./components/about-us/AboutUs.comopnent'));
 const ContactUs = lazy(() => import('./components/contact-us/ContactUs.comopnent'));
 const LoginSignUp = lazy(() => import('./components/login-signup/LoginSIgnUp.component'));
 const AllProductsListing = lazy(() => import('./routes/All-Products/AllProducts.component'));
+const ProductView = lazy(() => import('./routes/Product-View/Product-View')) ;
+
 
 
 
@@ -75,6 +77,7 @@ function App() {
                 <Route path="/contact-us" element={<ContactUs/>} />
                 <Route path="/auth" element={<LoginSignUp/>} />
                 <Route path="/all-product" element={<AllProductsListing/>} />
+                <Route path="/product-view" element={<ProductView/>} />
               </Routes>
             <FooterComponent />
         </Router>
