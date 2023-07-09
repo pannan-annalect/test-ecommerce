@@ -1,4 +1,8 @@
 .product-view{
+    margin: 2em 0;
+    .srtdesc{
+        list-style-image: url(https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Frame_4_578f9a20-a675-43d2-8d9e-bc88ceec9380.png?v=1652420213);
+    }
     
 }
 .product-all-details{
@@ -14,8 +18,56 @@
         }
     }
     .benefit-section{
+        text-align: center;
+        align-items: center;
+        
         .benefit-content{
             
+        }
+    }
+    .skin-type{
+        background: #ff7f11;
+    color: #fff;
+    text-align: right;
+    padding-right: 15%;
+    margin-top: -7.3%;
+    .skin-head{
+        font-size: 2rem;
+        padding: 0.5em;
+    }
+    }
+    .detail-head{
+        font-size: XX-LARGE;
+        font-weight: BOLD;
+        font-family: 'Tiempos Medium Italics';
+        line-height: 1.2EM;
+        color: #ff7f11;
+    }
+    .MuiListItemText-root{
+        .MuiTypography-root{
+            font-size: 1.3rem;
+        }
+    }
+
+    .ingrsec{
+        display: flex;
+        align-items: center;
+        .ingriHead{
+            line-height: 1.5em;
+            color: #FF5600;
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+    }
+    .howtosec{
+        background: url('https://cdn.shopify.com/s/files/1/0361/8553/8692/files/Rectangle_715_18.png?v=1667800623') no-repeat;
+        background-size: 100%;
+        .hwtushead{
+            padding: 5% 8% 4%;
+            font-family: "Tiempos Medium Italics";
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
         }
     }
 }
