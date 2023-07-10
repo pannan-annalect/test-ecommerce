@@ -5,6 +5,11 @@ import PropTypes from 'prop-types';
 import './Product-View.scss'
 import productimage from '../../assets/images/best-seller.jpg';
 import {Star} from '@mui/icons-material';
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import CustomerReview from "./CustomerReview";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -41,6 +46,11 @@ function TabPanel(props) {
 
 function ProductView() {
     const [value, setValue] = React.useState(0);
+    const [expanded, setExpanded] = React.useState(false);
+
+  const handleaccordChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -301,53 +311,57 @@ function ProductView() {
                                     </Grid>
                                 </Grid>
                             </Grid>
-                            <hr />
                             <Grid item sx={{ textAlign: "center", margin: '2em'}}>
-                                <Typography>FULL INGREDIENT LIST ↓</Typography>
+                                <Accordion expanded={expanded === 'panel1'} onChange={handleaccordChange('panel1')}>
+                                    <AccordionSummary
+                                    // expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1bh-content"
+                                    id="panel1bh-header"
+                                    sx={{alignItems: 'center', justifyContent: 'center'}}
+                                    >
+                                    <Typography sx={{ width: '33%', flexShrink: 0 }}>
+                                        FULL INGREDIENT LIST ↓
+                                    </Typography>
+                                    {/* <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography> */}
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>
+                                        <b>10% Vitamin C + E &amp; 5% Niacinamide Serum:</b> <br />Water, 
+                                        Ethyl Ascorbic Acid, Ethoxydiglycol, Propanediol, Niacinamide, 
+                                        1,3- Butylene Glycol, Citric Acid, Hydroxypropyl Guar, Disodium EDTA, 
+                                        Allantoin, Sodium Gluconate, Ferulic Acid, Xanthan Gum, Hyaluronic Acid, 
+                                        Tocopheryl Acetate, Alpha Arbutin, Laminaria Digitata Extract (and) 
+                                        Cetyl-PG Hydroxyethyl Palmitamide (and) Ceramide mix, Citrus Aurantium 
+                                        Dulcis (Blood Orange) Fruit Extract, Terminalia Ferdinandiana (Kakadu 
+                                        Plum) Fruit Extract, Cucurbita Pepo (Pumpkin) Fruit Extract, Benzyl 
+                                        Alcohol (and) Ethylhexylglycerin (and) Tocopherol. <b>Vitamin C Super 
+                                        Bright Foaming Face Wash</b> <br /> Aqua, Cocamidopropyl Betaine, 
+                                        Glycerine, Caprylyl/Capryl Glucoside, Sodium Methyl Cocoyl Taurate, 
+                                        Disodium Cocoyl Glutamate, Ethyl Ascorbic Acid, Sodium Ascorbyl Phosphate,
+                                        Silanetriol (and) Hyaluronic Acid, Panthenol, Citrus Sinensis (Blood 
+                                        Orange) Fruit Extract, Carica Papaya (Papaya) Fruit Extract, Terminalia 
+                                        Ferdinandiana (Kakadu Plum) Fruit Extract, Citric Acid, BHT, Disodium 
+                                        EDTA, Benzyl Alcohol (and) Ethylhexylglycerin (and) Tocopherol, IFRA 
+                                        Certified Allergen Free Fragrance, CI 15985, CI 45100 <br /> <b>Vitamin C + 
+                                        E Moisturizer With Sicilian Blood Orange</b><br /> Butyrospermum Parkii 
+                                        (Shea) Butter, Ethyl Ascorbic Acid, Tocopheryl Acetate, Terminalia 
+                                        Ferdinandiana (Kakadu Plum) Fruit Extract, Citrus Sinensis (Blood Orange) 
+                                        Fruit Extracts. <br /><br /> 
+                                        <b>Vitamin C + E SPF 50 Sunscreen</b><br />Aqua, Ethylhexyl Methoxycinnamate (and) 
+                                        Butyl Methoxydibenzoylmethane (and) Benzophenone-3 (and) Phospholipids, 
+                                        Diethylhexyl Carbonate, Titanium Dioxide (and) Silica, Glyceryl Citrate/Lactate
+                                        /Linoleate/Oleate, Caprylic/Capric Triglyceride, Coco-Caprylate/Caprate, 
+                                        Glycerin, Propanediol, Polyacrylate-13 (and) Polyisobutene (and) Polysorbate 20, 
+                                        Polyacrylate Crosspolymer 6 , Ascorbyl Glucoside , Fructooligosaccharides (and) 
+                                        Beta Vulgaris Root Extract, Tocopheryl Acetate, Terminalia Ferdinandiana (Kakadu 
+                                        Plum) Fruit Extract, Citrus Cinennsis (Blood Orange) Fruit Extract, Phenoxyethanol , 
+                                        Ethylhexylglycerin, Trisodium Ethylenediamine Disuccinate, Xanthan Gum, 
+                                        Citric Acid.<br />
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+      
                             </Grid>
-                            <hr />
-
-                                {/* <div class="fulling-ing">
-                                    <b>10% Vitamin C + E &amp; 5% Niacinamide Serum:</b> <br>Water, 
-                                    Ethyl Ascorbic Acid, Ethoxydiglycol, Propanediol, Niacinamide, 
-                                    1,3- Butylene Glycol, Citric Acid, Hydroxypropyl Guar, Disodium EDTA, 
-                                    Allantoin, Sodium Gluconate, Ferulic Acid, Xanthan Gum, Hyaluronic Acid, 
-                                    Tocopheryl Acetate, Alpha Arbutin, Laminaria Digitata Extract (and) 
-                                    Cetyl-PG Hydroxyethyl Palmitamide (and) Ceramide mix, Citrus Aurantium 
-                                    Dulcis (Blood Orange) Fruit Extract, Terminalia Ferdinandiana (Kakadu 
-                                    Plum) Fruit Extract, Cucurbita Pepo (Pumpkin) Fruit Extract, Benzyl 
-                                    Alcohol (and) Ethylhexylglycerin (and) Tocopherol. <b>Vitamin C Super 
-                                    Bright Foaming Face Wash</b> <br> Aqua, Cocamidopropyl Betaine, 
-                                    Glycerine, Caprylyl/Capryl Glucoside, Sodium Methyl Cocoyl Taurate, 
-                                    Disodium Cocoyl Glutamate, Ethyl Ascorbic Acid, Sodium Ascorbyl Phosphate,
-                                    Silanetriol (and) Hyaluronic Acid, Panthenol, Citrus Sinensis (Blood 
-                                    Orange) Fruit Extract, Carica Papaya (Papaya) Fruit Extract, Terminalia 
-                                    Ferdinandiana (Kakadu Plum) Fruit Extract, Citric Acid, BHT, Disodium 
-                                    EDTA, Benzyl Alcohol (and) Ethylhexylglycerin (and) Tocopherol, IFRA 
-                                    Certified Allergen Free Fragrance, CI 15985, CI 45100 <br> <b>Vitamin C + 
-                                    E Moisturizer With Sicilian Blood Orange</b><br> Butyrospermum Parkii 
-                                    (Shea) Butter, Ethyl Ascorbic Acid, Tocopheryl Acetate, Terminalia 
-                                    Ferdinandiana (Kakadu Plum) Fruit Extract, Citrus Sinensis (Blood Orange) 
-                                    Fruit Extracts. <br><br> 
-                                    <b>Vitamin C + E SPF 50 Sunscreen</b><br>Aqua, Ethylhexyl Methoxycinnamate (and) 
-                                    Butyl Methoxydibenzoylmethane (and) Benzophenone-3 (and) Phospholipids, 
-                                    Diethylhexyl Carbonate, Titanium Dioxide (and) Silica, Glyceryl Citrate/Lactate
-                                    /Linoleate/Oleate, Caprylic/Capric Triglyceride, Coco-Caprylate/Caprate, 
-                                    Glycerin, Propanediol, Polyacrylate-13 (and) Polyisobutene (and) Polysorbate 20, 
-                                    Polyacrylate Crosspolymer 6 , Ascorbyl Glucoside , Fructooligosaccharides (and) 
-                                    Beta Vulgaris Root Extract, Tocopheryl Acetate, Terminalia Ferdinandiana (Kakadu 
-                                    Plum) Fruit Extract, Citrus Cinennsis (Blood Orange) Fruit Extract, Phenoxyethanol , 
-                                    Ethylhexylglycerin, Trisodium Ethylenediamine Disuccinate, Xanthan Gum, 
-                                    Citric Acid.<br>
-                                </div> */}
-
-
-
-
-
-
-
-
                         </TabPanel>
                         <TabPanel value={value} index={2}>
                             <Grid container className="howtosec">
@@ -386,7 +400,93 @@ function ProductView() {
             <Grid container>
                 <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/image_563.png?v=1667800623" alt=""/>
             </Grid>
+                            <Grid>
+                                <Accordion expanded={expanded === 'panel2'} onChange={handleaccordChange('panel2')}>
+                                    <AccordionSummary
+                                    // expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1bh-content"
+                                    id="panel1bh-header"
+                                    sx={{alignItems: 'center', justifyContent: 'center'}}
+                                    >
+                                    <Typography sx={{ width: '33%', flexShrink: 0, textAlign:'center' }}>
+                                        FAQ ↓
+                                    </Typography>
+                                    {/* <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography> */}
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography><strong>Q. Will this serum improve my skin tone?</strong></Typography>
+                                        <Typography>A. The serum is powered by 10% Triple Vitamin C+5% 
+                                            Niacinamide that helps fade dark, hyperpigmentation and 
+                                            dullness to provide even-toned, glowing skin. 
+                                            It also boosts collagen with the help of Sicilian Blood 
+                                            Orange by reversing free radical damage for firmer skin.
+                                        </Typography>
+                                        <Typography><strong>Q. Which skin type is this combo suitable for?</strong></Typography>
+                                        <Typography>A. This combo is suitable for all skin types. It is 
+                                            also beginner friendly which means it suits the skin that is 
+                                            new to Vitamin C. It can be easily incorporated into your 
+                                            daily skincare routine
+                                        </Typography>
+                                        <Typography><strong>Q. Is this serum suitable for both men & women?</strong></Typography>
+                                        <Typography>A. This face serum works equally well for both men and women.</Typography>
+                                        <Typography><strong>Q. What is the recommended age for using this serum?</strong></Typography>
+                                        <Typography>A. Anyone over 18 years of age can use this product.</Typography>
+                                        <Typography><strong>Q. Why do I need Vitamin C?</strong></Typography>
+                                        <Typography>A. Vitamin C is the answer to all your skin queries 
+                                            concerning dullness, dark spots, pigmentation and sun damage. 
+                                            It is a tried and tested antioxidant that shows the best 
+                                            improvement in your complexion over time. Our users have 
+                                            observed a visible reduction in dark spots, hyperpigmentation, 
+                                            dullness and even fine lines and wrinkles. It is the one-stop 
+                                            solution for anyone facing the above-mentioned skin concerns.
+                                        </Typography>
+                                        <Typography><strong>Q. Will the Vitamin C Sunscreen make my skin look greasy?</strong></Typography>
+                                        <Typography>A. No. Our Vitamin C Sunscreen is formulated to give 
+                                            your skin a beautiful glowy finish without making it look 
+                                            greasy. It will give your skin an invisible finish without any 
+                                            white cast or heavy feeling.
+                                        </Typography>
+                                        <Typography><strong>Q. Why Vitamin C+SPF 50?</strong></Typography>
+                                        <Typography>A. Vitamin C is popularly known to fight dullness, 
+                                            pigmentation, dark spots & uneven skin tone. SPF on the 
+                                            other hand is known to protect skin against the damaging UVB 
+                                            & UVA rays. When mixed together, it provides even-toned, 
+                                            glowing & protected skin every day, thus truly making it 
+                                            'The Perfect Match Made in Skin Heaven'.
+                                        </Typography>
+                                        <Typography><strong>Q. I have sensitive skin, can I use this combo?</strong></Typography>
+                                        <Typography>A. Yes, since our combo has been designed for all 
+                                            skin types. However, post-application, if you feel any 
+                                            tingling effect or irritation that persists, you can stop 
+                                            using it immediately.
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            </Grid>
+                            <Grid>
+                                <Accordion expanded={expanded === 'panel3'} onChange={handleaccordChange('panel3')}>
+                                    <AccordionSummary
+                                    // expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1bh-content"
+                                    id="panel1bh-header"
+                                    sx={{alignItems: 'center', justifyContent: 'center'}}
+                                    >
+                                    <Typography sx={{ width: '33%', flexShrink: 0, textAlign:'center' }}>
+                                    MORE INFORMATION ↓
+                                    </Typography>
+                                    {/* <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography> */}
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                        <Typography>Manufactured by N/A </Typography>
+                                        <Typography>Expiry date N/A</Typography>
+                                        <Typography>Country of origin INDIA</Typography>
+                                        <Typography>MRP 2080</Typography>
+                                        <Typography>Net Qty N/A</Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            </Grid>
         </div>
+        <CustomerReview />
         </>
     )
 }
