@@ -164,7 +164,7 @@ function ProductView() {
                                     <Typography className="detail-head" variant="h2">
                                         Benefits
                                     </Typography>
-                                    <List sx={{listStyleType:'disc',pl:4, margin: '0 0 2em 9em'}}>
+                                    <List className="benelist" sx={{listStyleType:'disc',pl:4}}>
                                         <ListItem sx={{display:"list-item",padding:'0 0 2em 0'}}>
                                             <ListItemText>
                                             Treats dullness for glowing skin.
@@ -193,7 +193,7 @@ function ProductView() {
                             </Grid>
                             <Grid container className="skin-care">
                                 <Grid item sm={4} className="skincare-img">
-                                    <img style={{width:'80%', borderRadius:'50%', border: '5px solid white'}} src={productimage} alt=""/>
+                                    <img className="skinimg" style={{}} src={productimage} alt=""/>
                                 </Grid>
                                 <Grid item sm={8} className="">
                                     <Typography className="detail-head" sx={{textAlign: 'left'}} variant="h2">Who is it for?</Typography>
@@ -231,7 +231,7 @@ function ProductView() {
                             </Grid>
                             <Grid sx={{}} className="skin-type">
                                 <Typography className="skin-head" variant="h3" >Skin Types &nbsp;
-                                    <Typography className="skin-text" variant="span" sx={{fontSize:'1.3rem'}}>
+                                    <Typography className="skin-text" variant="span">
                                         For All Skin Types
                                     </Typography>
                                 </Typography>

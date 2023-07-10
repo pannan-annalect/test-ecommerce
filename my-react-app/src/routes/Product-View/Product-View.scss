@@ -25,6 +25,16 @@
             
         }
     }
+    .benelist{
+        margin: 0 0 2em 9em;
+    }
+    .skincare-img{
+        .skinimg{
+            width:80%; 
+            border-radius: 50%; 
+            border: 5px solid white;
+        }
+    }
     .skin-type{
         background: #ff7f11;
     color: #fff;
@@ -34,6 +44,9 @@
     .skin-head{
         font-size: 2rem;
         padding: 0.5em;
+        span{
+            font-size:1.3rem;
+        }
     }
     }
     .detail-head{
@@ -99,4 +112,44 @@
         align-items: center;
         justify-content: center;
     }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .product-all-details {
+        .benefit-section{
+            text-align: left;
+        }
+        .benelist{
+            margin: 0 0 0em 0em;
+        }
+        .skincare-img{
+            .skinimg{
+                width:60%;
+            }
+        }
+        .MuiListItemText-root{
+            .MuiTypography-root{
+                font-size: 0.75rem;
+            }
+        }
+        .skin-type{
+            .skin-head{
+                font-size: 1.5rem;
+                padding: 0.5em;
+                span{
+                    font-size:1rem;
+                }
+            }
+        }
+        .product-tabs{
+            .MuiTabs-flexContainer{
+                button{
+                    font-size: 13px;
+                }
+            }
+        }
+        
+    }
+    
 }
