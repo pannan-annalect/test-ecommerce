@@ -70,4 +70,33 @@
             color: white;
         }
     }
+
+    
+}
+.custname{
+    font-size: 1.4em !important;
+    font-weight: 400 !important;
+}
+.custcoment{
+    font-size: 1.4em !important;
+    font-weight: 500 !important;
+}
+.MuiGrid-container{
+    .btnask{
+        border: 1px solid gray;
+        font-weight: 400;
+        color: gray;
+        background: none;
+        margin: 2em 0;
+        padding: 0px 10px;
+        line-height: 23px;
+        min-height: 43px;
+    }
+}
+
+.MuiAccordionSummary-root{
+    .MuiAccordionSummary-content{
+        align-items: center;
+        justify-content: center;
+    }
 }
